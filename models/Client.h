@@ -1,50 +1,41 @@
 #ifndef CLIENT_H
 #define CLIENT_H
+#include <QString>
+#include "comptebancaire.h"
 
-#include <string>
+enum class StatutClient
+{
+    ACTIF,
+    INACTIF
+};
 
 class Client
 {
 private:
     int id;
-    std::string nom;
-    std::string email;
-    std::string telephone;
+    QString nom;
+    QString email;
+    QString telephone;
+    QVector<CompteBancaire*> comptes;
+    StatutClient statut;
 
 public:
-
     Client(
         int id,
-        const std::string& nom,
-        const std::string& email,
-        const std::string& telephone)
-        :
-        id(id),
-        nom(nom),
-        email(email),
-        telephone(telephone)
-    {
-    }
+        const QString& nom,
+        const QString& email,
+        const QString& telephone
+    );
 
-    int getId() const
-    {
-        return id;
-    }
-
-    const std::string& getNom() const
-    {
-        return nom;
-    }
-
-    const std::string& getEmail() const
-    {
-        return email;
-    }
-
-    const std::string& getTelephone() const
-    {
-        return telephone;
-    }
+    int getId() const;
+    QString getNom() const;
+    QString getEmail() const;
+    QString getTelephone() const;
+    void ajouterCompte(CompteBancaire* compte);
+    QVector<CompteBancaire*> getComptes() const;
+    double getSoldeTotal() const;
+    StatutClient getStatut() const;
+    void setStatut(StatutClient statut);
+    bool estActif() const;
 };
-
 #endif

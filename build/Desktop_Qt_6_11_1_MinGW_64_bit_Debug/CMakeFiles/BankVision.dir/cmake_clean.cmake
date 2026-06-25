@@ -1,0 +1,35 @@
+file(REMOVE_RECURSE
+  "BankVision.exe"
+  "BankVision.exe.manifest"
+  "BankVision.pdb"
+  "CMakeFiles/BankVision.dir/data/datamanager.cpp.obj"
+  "CMakeFiles/BankVision.dir/data/datamanager.cpp.obj.d"
+  "CMakeFiles/BankVision.dir/main.cpp.obj"
+  "CMakeFiles/BankVision.dir/main.cpp.obj.d"
+  "CMakeFiles/BankVision.dir/models/Client.cpp.obj"
+  "CMakeFiles/BankVision.dir/models/Client.cpp.obj.d"
+  "CMakeFiles/BankVision.dir/models/banque.cpp.obj"
+  "CMakeFiles/BankVision.dir/models/banque.cpp.obj.d"
+  "CMakeFiles/BankVision.dir/models/comptebancaire.cpp.obj"
+  "CMakeFiles/BankVision.dir/models/comptebancaire.cpp.obj.d"
+  "CMakeFiles/BankVision.dir/models/comptecourant.cpp.obj"
+  "CMakeFiles/BankVision.dir/models/comptecourant.cpp.obj.d"
+  "CMakeFiles/BankVision.dir/models/compteepargne.cpp.obj"
+  "CMakeFiles/BankVision.dir/models/compteepargne.cpp.obj.d"
+  "CMakeFiles/BankVision.dir/models/compteprofessionnel.cpp.obj"
+  "CMakeFiles/BankVision.dir/models/compteprofessionnel.cpp.obj.d"
+  "CMakeFiles/BankVision.dir/models/transaction.cpp.obj"
+  "CMakeFiles/BankVision.dir/models/transaction.cpp.obj.d"
+  "CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj"
+  "CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj.d"
+  "CMakeFiles/BankVision.dir/services/clientservice.cpp.obj"
+  "CMakeFiles/BankVision.dir/services/clientservice.cpp.obj.d"
+  "CMakeFiles/BankVision.dir/services/compteservice.cpp.obj"
+  "CMakeFiles/BankVision.dir/services/compteservice.cpp.obj.d"
+  "libBankVision.dll.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/BankVision.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
