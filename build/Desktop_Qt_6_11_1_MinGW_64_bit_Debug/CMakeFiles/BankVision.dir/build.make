@@ -248,6 +248,51 @@ CMakeFiles/BankVision.dir/data/datamanager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BankVision.dir/data/datamanager.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hp\Desktop\BankVision\data\datamanager.cpp -o CMakeFiles\BankVision.dir\data\datamanager.cpp.s
 
+CMakeFiles/BankVision.dir/models/pret.cpp.obj: CMakeFiles/BankVision.dir/flags.make
+CMakeFiles/BankVision.dir/models/pret.cpp.obj: CMakeFiles/BankVision.dir/includes_CXX.rsp
+CMakeFiles/BankVision.dir/models/pret.cpp.obj: C:/Users/hp/Desktop/BankVision/models/pret.cpp
+CMakeFiles/BankVision.dir/models/pret.cpp.obj: CMakeFiles/BankVision.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/BankVision.dir/models/pret.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BankVision.dir/models/pret.cpp.obj -MF CMakeFiles\BankVision.dir\models\pret.cpp.obj.d -o CMakeFiles\BankVision.dir\models\pret.cpp.obj -c C:\Users\hp\Desktop\BankVision\models\pret.cpp
+
+CMakeFiles/BankVision.dir/models/pret.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BankVision.dir/models/pret.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hp\Desktop\BankVision\models\pret.cpp > CMakeFiles\BankVision.dir\models\pret.cpp.i
+
+CMakeFiles/BankVision.dir/models/pret.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BankVision.dir/models/pret.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hp\Desktop\BankVision\models\pret.cpp -o CMakeFiles\BankVision.dir\models\pret.cpp.s
+
+CMakeFiles/BankVision.dir/models/utilisateur.cpp.obj: CMakeFiles/BankVision.dir/flags.make
+CMakeFiles/BankVision.dir/models/utilisateur.cpp.obj: CMakeFiles/BankVision.dir/includes_CXX.rsp
+CMakeFiles/BankVision.dir/models/utilisateur.cpp.obj: C:/Users/hp/Desktop/BankVision/models/utilisateur.cpp
+CMakeFiles/BankVision.dir/models/utilisateur.cpp.obj: CMakeFiles/BankVision.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/BankVision.dir/models/utilisateur.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BankVision.dir/models/utilisateur.cpp.obj -MF CMakeFiles\BankVision.dir\models\utilisateur.cpp.obj.d -o CMakeFiles\BankVision.dir\models\utilisateur.cpp.obj -c C:\Users\hp\Desktop\BankVision\models\utilisateur.cpp
+
+CMakeFiles/BankVision.dir/models/utilisateur.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BankVision.dir/models/utilisateur.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hp\Desktop\BankVision\models\utilisateur.cpp > CMakeFiles\BankVision.dir\models\utilisateur.cpp.i
+
+CMakeFiles/BankVision.dir/models/utilisateur.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BankVision.dir/models/utilisateur.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hp\Desktop\BankVision\models\utilisateur.cpp -o CMakeFiles\BankVision.dir\models\utilisateur.cpp.s
+
+CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.obj: CMakeFiles/BankVision.dir/flags.make
+CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.obj: CMakeFiles/BankVision.dir/includes_CXX.rsp
+CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.obj: C:/Users/hp/Desktop/BankVision/controllers/authcontroller.cpp
+CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.obj: CMakeFiles/BankVision.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.obj -MF CMakeFiles\BankVision.dir\controllers\authcontroller.cpp.obj.d -o CMakeFiles\BankVision.dir\controllers\authcontroller.cpp.obj -c C:\Users\hp\Desktop\BankVision\controllers\authcontroller.cpp
+
+CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hp\Desktop\BankVision\controllers\authcontroller.cpp > CMakeFiles\BankVision.dir\controllers\authcontroller.cpp.i
+
+CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hp\Desktop\BankVision\controllers\authcontroller.cpp -o CMakeFiles\BankVision.dir\controllers\authcontroller.cpp.s
+
 # Object files for target BankVision
 BankVision_OBJECTS = \
 "CMakeFiles/BankVision.dir/main.cpp.obj" \
@@ -261,7 +306,10 @@ BankVision_OBJECTS = \
 "CMakeFiles/BankVision.dir/services/clientservice.cpp.obj" \
 "CMakeFiles/BankVision.dir/services/compteservice.cpp.obj" \
 "CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj" \
-"CMakeFiles/BankVision.dir/data/datamanager.cpp.obj"
+"CMakeFiles/BankVision.dir/data/datamanager.cpp.obj" \
+"CMakeFiles/BankVision.dir/models/pret.cpp.obj" \
+"CMakeFiles/BankVision.dir/models/utilisateur.cpp.obj" \
+"CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.obj"
 
 # External object files for target BankVision
 BankVision_EXTERNAL_OBJECTS =
@@ -278,14 +326,18 @@ BankVision.exe: CMakeFiles/BankVision.dir/services/clientservice.cpp.obj
 BankVision.exe: CMakeFiles/BankVision.dir/services/compteservice.cpp.obj
 BankVision.exe: CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj
 BankVision.exe: CMakeFiles/BankVision.dir/data/datamanager.cpp.obj
+BankVision.exe: CMakeFiles/BankVision.dir/models/pret.cpp.obj
+BankVision.exe: CMakeFiles/BankVision.dir/models/utilisateur.cpp.obj
+BankVision.exe: CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.obj
 BankVision.exe: CMakeFiles/BankVision.dir/build.make
 BankVision.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Widgets.a
+BankVision.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Sql.a
 BankVision.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Gui.a
 BankVision.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Core.a
 BankVision.exe: CMakeFiles/BankVision.dir/linkLibs.rsp
 BankVision.exe: CMakeFiles/BankVision.dir/objects1.rsp
 BankVision.exe: CMakeFiles/BankVision.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable BankVision.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable BankVision.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\BankVision.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

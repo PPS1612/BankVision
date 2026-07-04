@@ -128,6 +128,30 @@ BankVision/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/build
 .PHONY : BankVision/fast
 
+controllers/authcontroller.obj: controllers/authcontroller.cpp.obj
+.PHONY : controllers/authcontroller.obj
+
+# target to build an object file
+controllers/authcontroller.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.obj
+.PHONY : controllers/authcontroller.cpp.obj
+
+controllers/authcontroller.i: controllers/authcontroller.cpp.i
+.PHONY : controllers/authcontroller.i
+
+# target to preprocess a source file
+controllers/authcontroller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.i
+.PHONY : controllers/authcontroller.cpp.i
+
+controllers/authcontroller.s: controllers/authcontroller.cpp.s
+.PHONY : controllers/authcontroller.s
+
+# target to generate assembly for a file
+controllers/authcontroller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.s
+.PHONY : controllers/authcontroller.cpp.s
+
 data/datamanager.obj: data/datamanager.cpp.obj
 .PHONY : data/datamanager.obj
 
@@ -320,6 +344,30 @@ models/compteprofessionnel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/models/compteprofessionnel.cpp.s
 .PHONY : models/compteprofessionnel.cpp.s
 
+models/pret.obj: models/pret.cpp.obj
+.PHONY : models/pret.obj
+
+# target to build an object file
+models/pret.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/models/pret.cpp.obj
+.PHONY : models/pret.cpp.obj
+
+models/pret.i: models/pret.cpp.i
+.PHONY : models/pret.i
+
+# target to preprocess a source file
+models/pret.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/models/pret.cpp.i
+.PHONY : models/pret.cpp.i
+
+models/pret.s: models/pret.cpp.s
+.PHONY : models/pret.s
+
+# target to generate assembly for a file
+models/pret.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/models/pret.cpp.s
+.PHONY : models/pret.cpp.s
+
 models/transaction.obj: models/transaction.cpp.obj
 .PHONY : models/transaction.obj
 
@@ -343,6 +391,30 @@ models/transaction.s: models/transaction.cpp.s
 models/transaction.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/models/transaction.cpp.s
 .PHONY : models/transaction.cpp.s
+
+models/utilisateur.obj: models/utilisateur.cpp.obj
+.PHONY : models/utilisateur.obj
+
+# target to build an object file
+models/utilisateur.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/models/utilisateur.cpp.obj
+.PHONY : models/utilisateur.cpp.obj
+
+models/utilisateur.i: models/utilisateur.cpp.i
+.PHONY : models/utilisateur.i
+
+# target to preprocess a source file
+models/utilisateur.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/models/utilisateur.cpp.i
+.PHONY : models/utilisateur.cpp.i
+
+models/utilisateur.s: models/utilisateur.cpp.s
+.PHONY : models/utilisateur.s
+
+# target to generate assembly for a file
+models/utilisateur.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/models/utilisateur.cpp.s
+.PHONY : models/utilisateur.cpp.s
 
 services/banqueservice.obj: services/banqueservice.cpp.obj
 .PHONY : services/banqueservice.obj
@@ -425,6 +497,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... BankVision
+	@echo ... controllers/authcontroller.obj
+	@echo ... controllers/authcontroller.i
+	@echo ... controllers/authcontroller.s
 	@echo ... data/datamanager.obj
 	@echo ... data/datamanager.i
 	@echo ... data/datamanager.s
@@ -449,9 +524,15 @@ help:
 	@echo ... models/compteprofessionnel.obj
 	@echo ... models/compteprofessionnel.i
 	@echo ... models/compteprofessionnel.s
+	@echo ... models/pret.obj
+	@echo ... models/pret.i
+	@echo ... models/pret.s
 	@echo ... models/transaction.obj
 	@echo ... models/transaction.i
 	@echo ... models/transaction.s
+	@echo ... models/utilisateur.obj
+	@echo ... models/utilisateur.i
+	@echo ... models/utilisateur.s
 	@echo ... services/banqueservice.obj
 	@echo ... services/banqueservice.i
 	@echo ... services/banqueservice.s

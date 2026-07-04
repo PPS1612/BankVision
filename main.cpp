@@ -1,58 +1,54 @@
 #include <QCoreApplication>
 #include <QDebug>
+#include <QCryptographicHash>
 
-#include "models/banque.h"
-#include "models/client.h"
+#include "models/utilisateur.h"
+#include "controllers/authcontroller.h"
 
-#include "services/clientservice.h"
-#include "services/banqueservice.h"
+QString genererHash(const QString& motDePasse)
+{
+    QByteArray hash = QCryptographicHash::hash(
+        motDePasse.toUtf8(),
+        QCryptographicHash::Sha256
+        );
+
+    return hash.toHex();
+}
 
 int main(int argc, char *argv[])
 {
     QCoreApplication app(argc, argv);
 
-    Banque banque("BankVision");
+    QString hashCorrect = genererHash("admin123");
 
-    ClientService clientService;
-    BanqueService banqueService;
-
-    Client client1(
+    Utilisateur utilisateur(
         1,
-        "Jean Dupont",
-        "jean@gmail.com",
-        "0123456789"
+        "admin",
+        hashCorrect,
+        "Administrateur BankVision",
+        RoleUtilisateur::ADMIN,
+        StatutUtilisateur::ACTIF
         );
 
-    clientService.ajouterClient(banque, &client1);
+    AuthController authController;
 
-    banqueService.ouvrirCompteCourant(
-        client1,
-        "FR001-COURANT",
-        1000.0,
-        300.0
-        );
+    qDebug() << "Test mauvais mot de passe :"
+             << authController.connecter("admin", "mauvais", utilisateur);
 
-    banqueService.ouvrirCompteEpargne(
-        client1,
-        "FR002-EPARGNE",
-        2000.0,
-        3.5
-        );
+    qDebug() << "Nombre essais :"
+             << authController.getNombreEssais();
 
-    banqueService.ouvrirCompteProfessionnel(
-        client1,
-        "FR003-PRO",
-        5000.0,
-        "TechVision SARL",
-        1000.0,
-        2500.0
-        );
+    qDebug() << "Test mauvais login :"
+             << authController.connecter("user", "admin123", utilisateur);
 
-    qDebug() << "Nom banque :" << banque.getNom();
-    qDebug() << "Nombre de clients :" << banque.getNombreClients();
-    qDebug() << "Nombre de comptes du client :" << client1.getComptes().size();
-    qDebug() << "Solde total du client :" << client1.getSoldeTotal();
-    qDebug() << "Solde total banque :" << banqueService.calculerSoldeTotalBanque(banque);
+    qDebug() << "Nombre essais :"
+             << authController.getNombreEssais();
+
+    qDebug() << "Test bon login + bon mot de passe :"
+             << authController.connecter("admin", "admin123", utilisateur);
+
+    qDebug() << "Nombre essais :"
+             << authController.getNombreEssais();
 
     return 0;
 }

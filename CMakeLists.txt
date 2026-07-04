@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_PREFIX_PATH "C:/Qt/6.11.1/mingw_64")
 
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets Sql)
 
 add_executable(BankVision
     main.cpp
@@ -34,5 +34,8 @@ add_executable(BankVision
     services/compteservice.h services/compteservice.cpp
     services/banqueservice.h services/banqueservice.cpp
     data/datamanager.h data/datamanager.cpp
+    models/pret.h models/pret.cpp
+    models/utilisateur.h models/utilisateur.cpp
+    controllers/authcontroller.h controllers/authcontroller.cpp
 )
-target_link_libraries(BankVision PRIVATE Qt6::Core Qt6::Widgets)
+target_link_libraries(BankVision PRIVATE Qt6::Core Qt6::Widgets Qt6::Sql)

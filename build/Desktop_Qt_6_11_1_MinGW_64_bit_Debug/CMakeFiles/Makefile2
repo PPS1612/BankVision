@@ -80,12 +80,12 @@ clean: CMakeFiles/BankVision.dir/clean
 CMakeFiles/BankVision.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target BankVision"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target BankVision"
 .PHONY : CMakeFiles/BankVision.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BankVision.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/BankVision.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles 0
 .PHONY : CMakeFiles/BankVision.dir/rule
