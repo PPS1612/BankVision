@@ -9,6 +9,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/hp/Desktop/BankVision/controllers/authcontroller.cpp" "CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.obj.d"
+  "C:/Users/hp/Desktop/BankVision/controllers/comptecontroller.cpp" "CMakeFiles/BankVision.dir/controllers/comptecontroller.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/controllers/comptecontroller.cpp.obj.d"
+  "C:/Users/hp/Desktop/BankVision/controllers/statcontroller.cpp" "CMakeFiles/BankVision.dir/controllers/statcontroller.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/controllers/statcontroller.cpp.obj.d"
   "C:/Users/hp/Desktop/BankVision/data/datamanager.cpp" "CMakeFiles/BankVision.dir/data/datamanager.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/data/datamanager.cpp.obj.d"
   "C:/Users/hp/Desktop/BankVision/main.cpp" "CMakeFiles/BankVision.dir/main.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/main.cpp.obj.d"
   "C:/Users/hp/Desktop/BankVision/models/Client.cpp" "CMakeFiles/BankVision.dir/models/Client.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/models/Client.cpp.obj.d"

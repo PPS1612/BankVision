@@ -6,6 +6,11 @@
 
 #include "../models/client.h"
 #include "../models/utilisateur.h"
+#include "../models/comptecourant.h"
+#include "../models/compteepargne.h"
+#include "../models/compteprofessionnel.h"
+#include "../models/transaction.h"
+#include "../models/pret.h"
 
 class DataManager
 {
@@ -41,6 +46,19 @@ public:
     // ==========================
     bool sauvegarderUtilisateur(const Utilisateur& utilisateur);
     Utilisateur* rechercherUtilisateurParLogin(const QString& login);
+
+    bool sauvegarderCompte(
+        const CompteBancaire& compte,
+        int clientId,
+        const QString& type
+        );
+
+    bool sauvegarderTransaction(
+        const Transaction& transaction,
+        const QString& ibanCompte
+        );
+
+    bool sauvegarderPret(const Pret& pret, int clientId);
 };
 
 #endif // DATAMANAGER_H

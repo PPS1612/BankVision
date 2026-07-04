@@ -359,6 +359,11 @@ CMakeFiles/BankVision.dir/data/datamanager.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
  C:/Users/hp/Desktop/BankVision/models/utilisateur.h \
+ C:/Users/hp/Desktop/BankVision/models/comptecourant.h \
+ C:/Users/hp/Desktop/BankVision/models/compteepargne.h \
+ C:/Users/hp/Desktop/BankVision/models/compteprofessionnel.h \
+ C:/Users/hp/Desktop/BankVision/models/transaction.h \
+ C:/Users/hp/Desktop/BankVision/models/pret.h \
  C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlQuery \
  C:/Qt/6.11.1/mingw_64/include/QtSql/qsqlquery.h \
  C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlError \

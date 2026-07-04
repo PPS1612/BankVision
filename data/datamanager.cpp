@@ -126,6 +126,25 @@ bool DataManager::creerTables()
         return false;
     }
 
+    ok = query.exec(
+        "CREATE TABLE IF NOT EXISTS prets ("
+        "id INTEGER PRIMARY KEY,"
+        "client_id INTEGER NOT NULL,"
+        "montant REAL NOT NULL,"
+        "taux_annuel REAL NOT NULL,"
+        "duree_mois INTEGER NOT NULL,"
+        "mensualite REAL NOT NULL,"
+        "statut TEXT NOT NULL,"
+        "FOREIGN KEY(client_id) REFERENCES clients(id)"
+        ")"
+        );
+
+    if (!ok)
+    {
+        qDebug() << "Erreur création table prets :" << query.lastError().text();
+        return false;
+    }
+
     qDebug() << "Tables créées avec succès.";
 
     return true;
@@ -282,4 +301,112 @@ Utilisateur* DataManager::rechercherUtilisateurParLogin(const QString& login)
     }
 
     return nullptr;
+}
+
+bool DataManager::sauvegarderCompte(
+    const CompteBancaire& compte,
+    int clientId,
+    const QString& type
+    )
+{
+    QSqlQuery query(database);
+
+    query.prepare(
+        "INSERT OR REPLACE INTO comptes "
+        "(iban, client_id, type, solde, statut) "
+        "VALUES (:iban, :client_id, :type, :solde, :statut)"
+        );
+
+    QString statut = "ACTIF";
+
+    if (compte.getStatut() == StatutCompte::BLOQUE)
+        statut = "BLOQUE";
+    else if (compte.getStatut() == StatutCompte::FERME)
+        statut = "FERME";
+
+    query.bindValue(":iban", compte.getIBAN());
+    query.bindValue(":client_id", clientId);
+    query.bindValue(":type", type);
+    query.bindValue(":solde", compte.getSolde());
+    query.bindValue(":statut", statut);
+
+    if (!query.exec())
+    {
+        qDebug() << "Erreur sauvegarde compte :" << query.lastError().text();
+        return false;
+    }
+
+    qDebug() << "Compte sauvegardé :" << compte.getIBAN();
+    return true;
+}
+
+
+bool DataManager::sauvegarderTransaction(
+    const Transaction& transaction,
+    const QString& ibanCompte)
+{
+    QSqlQuery query(database);
+
+    query.prepare(
+        "INSERT INTO transactions "
+        "(iban, date, type, montant, solde_apres, description) "
+        "VALUES "
+        "(:iban, :date, :type, :montant, :solde_apres, :description)"
+        );
+
+    query.bindValue(":iban", ibanCompte);
+    query.bindValue(":date", transaction.getDate().toString(Qt::ISODate));
+    query.bindValue(":type", transaction.getType());
+    query.bindValue(":montant", transaction.getMontant());
+    query.bindValue(":solde_apres", transaction.getSoldeApres());
+    query.bindValue(":description", transaction.getDescription());
+
+    if (!query.exec())
+    {
+        qDebug() << "Erreur sauvegarde transaction :"
+                 << query.lastError().text();
+        return false;
+    }
+
+    qDebug() << "Transaction enregistrée.";
+    return true;
+}
+
+
+bool DataManager::sauvegarderPret(const Pret& pret, int clientId)
+{
+    QSqlQuery query(database);
+
+    query.prepare(
+        "INSERT OR REPLACE INTO prets "
+        "(id, client_id, montant, taux_annuel, duree_mois, mensualite, statut) "
+        "VALUES "
+        "(:id, :client_id, :montant, :taux_annuel, :duree_mois, :mensualite, :statut)"
+        );
+
+    QString statut = "EN_ATTENTE";
+
+    if (pret.getStatut() == StatutPret::ACCEPTE)
+        statut = "ACCEPTE";
+    else if (pret.getStatut() == StatutPret::REFUSE)
+        statut = "REFUSE";
+    else if (pret.getStatut() == StatutPret::REMBOURSE)
+        statut = "REMBOURSE";
+
+    query.bindValue(":id", pret.getId());
+    query.bindValue(":client_id", clientId);
+    query.bindValue(":montant", pret.getMontant());
+    query.bindValue(":taux_annuel", pret.getTauxAnnuel());
+    query.bindValue(":duree_mois", pret.getDureeMois());
+    query.bindValue(":mensualite", pret.getMensualite());
+    query.bindValue(":statut", statut);
+
+    if (!query.exec())
+    {
+        qDebug() << "Erreur sauvegarde prêt :" << query.lastError().text();
+        return false;
+    }
+
+    qDebug() << "Prêt sauvegardé ID :" << pret.getId();
+    return true;
 }

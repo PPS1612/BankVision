@@ -1,54 +1,80 @@
 #include <QCoreApplication>
 #include <QDebug>
-#include <QCryptographicHash>
 
-#include "models/utilisateur.h"
-#include "controllers/authcontroller.h"
+#include "models/banque.h"
+#include "models/client.h"
+#include "models/comptecourant.h"
+#include "models/compteepargne.h"
 
-QString genererHash(const QString& motDePasse)
-{
-    QByteArray hash = QCryptographicHash::hash(
-        motDePasse.toUtf8(),
-        QCryptographicHash::Sha256
-        );
-
-    return hash.toHex();
-}
+#include "controllers/statcontroller.h"
 
 int main(int argc, char *argv[])
 {
     QCoreApplication app(argc, argv);
 
-    QString hashCorrect = genererHash("admin123");
+    Banque banque("BankVision");
 
-    Utilisateur utilisateur(
+    // -------------------- Client 1 --------------------
+
+    Client client1(
         1,
-        "admin",
-        hashCorrect,
-        "Administrateur BankVision",
-        RoleUtilisateur::ADMIN,
-        StatutUtilisateur::ACTIF
+        "Jean Dupont",
+        "jean@gmail.com",
+        "0123456789"
         );
 
-    AuthController authController;
+    CompteCourant* courant1 = new CompteCourant(
+        "FR001",
+        1000.0,
+        300.0
+        );
 
-    qDebug() << "Test mauvais mot de passe :"
-             << authController.connecter("admin", "mauvais", utilisateur);
+    CompteEpargne* epargne1 = new CompteEpargne(
+        "FR002",
+        2500.0,
+        3.5
+        );
 
-    qDebug() << "Nombre essais :"
-             << authController.getNombreEssais();
+    client1.ajouterCompte(courant1);
+    client1.ajouterCompte(epargne1);
 
-    qDebug() << "Test mauvais login :"
-             << authController.connecter("user", "admin123", utilisateur);
+    // -------------------- Client 2 --------------------
 
-    qDebug() << "Nombre essais :"
-             << authController.getNombreEssais();
+    Client client2(
+        2,
+        "Marie Martin",
+        "marie@gmail.com",
+        "0987654321"
+        );
 
-    qDebug() << "Test bon login + bon mot de passe :"
-             << authController.connecter("admin", "admin123", utilisateur);
+    CompteCourant* courant2 = new CompteCourant(
+        "FR003",
+        4000.0,
+        500.0
+        );
 
-    qDebug() << "Nombre essais :"
-             << authController.getNombreEssais();
+    client2.ajouterCompte(courant2);
+
+    // -------------------- Banque --------------------
+
+    banque.ajouterClient(&client1);
+    banque.ajouterClient(&client2);
+
+    // -------------------- Statistiques --------------------
+
+    StatController stats;
+
+    qDebug() << "Nombre clients :"
+             << stats.getNombreClients(banque);
+
+    qDebug() << "Nombre comptes :"
+             << stats.getNombreComptes(banque);
+
+    qDebug() << "Solde total banque :"
+             << stats.getSoldeTotalBanque(banque);
+
+    qDebug() << "Solde moyen par client :"
+             << stats.getSoldeMoyenClient(banque);
 
     return 0;
 }

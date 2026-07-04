@@ -152,6 +152,54 @@ controllers/authcontroller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.s
 .PHONY : controllers/authcontroller.cpp.s
 
+controllers/comptecontroller.obj: controllers/comptecontroller.cpp.obj
+.PHONY : controllers/comptecontroller.obj
+
+# target to build an object file
+controllers/comptecontroller.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/controllers/comptecontroller.cpp.obj
+.PHONY : controllers/comptecontroller.cpp.obj
+
+controllers/comptecontroller.i: controllers/comptecontroller.cpp.i
+.PHONY : controllers/comptecontroller.i
+
+# target to preprocess a source file
+controllers/comptecontroller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/controllers/comptecontroller.cpp.i
+.PHONY : controllers/comptecontroller.cpp.i
+
+controllers/comptecontroller.s: controllers/comptecontroller.cpp.s
+.PHONY : controllers/comptecontroller.s
+
+# target to generate assembly for a file
+controllers/comptecontroller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/controllers/comptecontroller.cpp.s
+.PHONY : controllers/comptecontroller.cpp.s
+
+controllers/statcontroller.obj: controllers/statcontroller.cpp.obj
+.PHONY : controllers/statcontroller.obj
+
+# target to build an object file
+controllers/statcontroller.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/controllers/statcontroller.cpp.obj
+.PHONY : controllers/statcontroller.cpp.obj
+
+controllers/statcontroller.i: controllers/statcontroller.cpp.i
+.PHONY : controllers/statcontroller.i
+
+# target to preprocess a source file
+controllers/statcontroller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/controllers/statcontroller.cpp.i
+.PHONY : controllers/statcontroller.cpp.i
+
+controllers/statcontroller.s: controllers/statcontroller.cpp.s
+.PHONY : controllers/statcontroller.s
+
+# target to generate assembly for a file
+controllers/statcontroller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/controllers/statcontroller.cpp.s
+.PHONY : controllers/statcontroller.cpp.s
+
 data/datamanager.obj: data/datamanager.cpp.obj
 .PHONY : data/datamanager.obj
 
@@ -500,6 +548,12 @@ help:
 	@echo ... controllers/authcontroller.obj
 	@echo ... controllers/authcontroller.i
 	@echo ... controllers/authcontroller.s
+	@echo ... controllers/comptecontroller.obj
+	@echo ... controllers/comptecontroller.i
+	@echo ... controllers/comptecontroller.s
+	@echo ... controllers/statcontroller.obj
+	@echo ... controllers/statcontroller.i
+	@echo ... controllers/statcontroller.s
 	@echo ... data/datamanager.obj
 	@echo ... data/datamanager.i
 	@echo ... data/datamanager.s

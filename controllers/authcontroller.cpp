@@ -1,6 +1,10 @@
 #include "authcontroller.h"
 
 #include <QCryptographicHash>
+#include <QDebug>
+
+#include "../data/datamanager.h"
+#include "../models/utilisateur.h"
 
 AuthController::AuthController()
     : nombreEssais(0),
@@ -18,41 +22,51 @@ QString AuthController::hasherMotDePasse(const QString& motDePasse) const
     return hash.toHex();
 }
 
-bool AuthController::verifierMotDePasse(
-    const QString& motDePasseSaisi,
-    const Utilisateur& utilisateur
-    )
-{
-    QString hashSaisi = hasherMotDePasse(motDePasseSaisi);
-
-    return hashSaisi == utilisateur.getMotDePasseHash();
-}
-
 bool AuthController::connecter(
     const QString& login,
-    const QString& motDePasse,
-    const Utilisateur& utilisateur
+    const QString& motDePasse
     )
 {
     if (estBloque())
-        return false;
-
-    if (!utilisateur.estActif())
-        return false;
-
-    if (login != utilisateur.getLogin())
     {
-        nombreEssais++;
+        qDebug() << "Compte temporairement bloqué.";
         return false;
     }
 
-    if (!verifierMotDePasse(motDePasse, utilisateur))
+    DataManager& dataManager = DataManager::getInstance();
+
+    Utilisateur* utilisateur =
+        dataManager.rechercherUtilisateurParLogin(login);
+
+    if (utilisateur == nullptr)
     {
         nombreEssais++;
+        qDebug() << "Utilisateur introuvable.";
         return false;
     }
 
+    if (!utilisateur->estActif())
+    {
+        delete utilisateur;
+        qDebug() << "Utilisateur bloqué.";
+        return false;
+    }
+
+    QString hashSaisi = hasherMotDePasse(motDePasse);
+
+    if (hashSaisi != utilisateur->getMotDePasseHash())
+    {
+        nombreEssais++;
+        delete utilisateur;
+        qDebug() << "Mot de passe incorrect.";
+        return false;
+    }
+
+    qDebug() << "Connexion réussie pour :" << utilisateur->getLogin();
+
+    delete utilisateur;
     nombreEssais = 0;
+
     return true;
 }
 

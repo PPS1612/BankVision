@@ -37,5 +37,7 @@ add_executable(BankVision
     models/pret.h models/pret.cpp
     models/utilisateur.h models/utilisateur.cpp
     controllers/authcontroller.h controllers/authcontroller.cpp
+    controllers/comptecontroller.h controllers/comptecontroller.cpp
+    controllers/statcontroller.h controllers/statcontroller.cpp
 )
 target_link_libraries(BankVision PRIVATE Qt6::Core Qt6::Widgets Qt6::Sql)
