@@ -348,22 +348,36 @@ CMakeFiles/BankVision.dir/main.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qhash.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qvarlengtharray.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qalloc.h \
- C:\Users\hp\Desktop\BankVision\models/banque.h \
+ C:\Users\hp\Desktop\BankVision\data/datamanager.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlDatabase \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qsqldatabase.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlglobal.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsql-config.h \
+ C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlexports.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qmetaobject.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qvariant.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/q23utility.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/q20utility.h \
+ C:/Users/hp/Desktop/BankVision/models/Client.h \
+ C:/Users/hp/Desktop/BankVision/models/comptebancaire.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QVector \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qvector.h \
- C:\Users\hp\Desktop\BankVision\models/client.h \
- C:\Users\hp\Desktop\BankVision\models/comptebancaire.h \
- C:\Users\hp\Desktop\BankVision\models/transaction.h \
+ C:/Users/hp/Desktop/BankVision/models/transaction.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QDateTime \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qdatetime.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qvariant.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/q23utility.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/q20utility.h \
- C:\Users\hp\Desktop\BankVision\models/client.h \
+ C:/Users/hp/Desktop/BankVision/models/utilisateur.h \
+ C:/Users/hp/Desktop/BankVision/models/comptecourant.h \
+ C:/Users/hp/Desktop/BankVision/models/compteepargne.h \
+ C:/Users/hp/Desktop/BankVision/models/compteprofessionnel.h \
+ C:/Users/hp/Desktop/BankVision/models/transaction.h \
+ C:/Users/hp/Desktop/BankVision/models/pret.h \
+ C:\Users\hp\Desktop\BankVision\models/Client.h \
  C:\Users\hp\Desktop\BankVision\models/comptecourant.h \
  C:\Users\hp\Desktop\BankVision\models/compteepargne.h \
- C:\Users\hp\Desktop\BankVision\controllers/statcontroller.h \
- C:/Users/hp/Desktop/BankVision/models/banque.h
+ C:\Users\hp\Desktop\BankVision\models/compteprofessionnel.h \
+ C:\Users\hp\Desktop\BankVision\services/compteservice.h \
+ C:/Users/hp/Desktop/BankVision/models/comptebancaire.h \
+ C:/Users/hp/Desktop/BankVision/models/compteepargne.h

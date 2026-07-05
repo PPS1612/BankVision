@@ -1,80 +1,125 @@
 #include <QCoreApplication>
 #include <QDebug>
 
-#include "models/banque.h"
-#include "models/client.h"
+#include "data/datamanager.h"
+#include "models/Client.h"
 #include "models/comptecourant.h"
 #include "models/compteepargne.h"
+#include "models/compteprofessionnel.h"
 
-#include "controllers/statcontroller.h"
+#include "services/compteservice.h"
 
 int main(int argc, char *argv[])
 {
     QCoreApplication app(argc, argv);
 
-    Banque banque("BankVision");
+    DataManager& dataManager = DataManager::getInstance();
 
-    // -------------------- Client 1 --------------------
+    if (!dataManager.initialiser("banque.db"))
+        return 1;
 
-    Client client1(
+    Client client(
         1,
         "Jean Dupont",
         "jean@gmail.com",
         "0123456789"
         );
 
-    CompteCourant* courant1 = new CompteCourant(
-        "FR001",
+    dataManager.sauvegarderClient(client);
+
+    CompteCourant courant(
+        "FR001-COURANT",
         1000.0,
         300.0
         );
 
-    CompteEpargne* epargne1 = new CompteEpargne(
-        "FR002",
-        2500.0,
+    CompteEpargne epargne(
+        "FR002-EPARGNE",
+        2000.0,
         3.5
         );
 
-    client1.ajouterCompte(courant1);
-    client1.ajouterCompte(epargne1);
-
-    // -------------------- Client 2 --------------------
-
-    Client client2(
-        2,
-        "Marie Martin",
-        "marie@gmail.com",
-        "0987654321"
+    CompteProfessionnel pro(
+        "FR003-PRO",
+        5000.0,
+        "TechVision SARL",
+        1000.0,
+        2500.0
         );
 
-    CompteCourant* courant2 = new CompteCourant(
-        "FR003",
-        4000.0,
-        500.0
+    dataManager.sauvegarderCompte(courant, client.getId(), "COURANT");
+    dataManager.sauvegarderCompte(epargne, client.getId(), "EPARGNE");
+    dataManager.sauvegarderCompte(pro, client.getId(), "PROFESSIONNEL");
+
+    CompteService compteService;
+
+    qDebug() << "===== RECHERCHE COMPTE SERVICE =====";
+
+    CompteBancaire* compteLu =
+        compteService.rechercherCompteParIBAN("FR001-COURANT");
+
+    if (compteLu != nullptr)
+    {
+        qDebug() << compteLu->getIBAN()
+        << compteLu->getSolde();
+
+        delete compteLu;
+    }
+
+    qDebug() << "===== LISTE COMPTES SERVICE =====";
+
+    QVector<CompteBancaire*> comptes =
+        compteService.getTousLesComptes();
+
+    qDebug() << "Nombre comptes :" << comptes.size();
+
+    for (CompteBancaire* compte : comptes)
+    {
+        qDebug() << compte->getIBAN()
+        << compte->getSolde();
+
+        delete compte;
+    }
+
+    qDebug() << "===== MODIFICATION COMPTE SERVICE =====";
+
+    CompteCourant courantModifie(
+        "FR001-COURANT",
+        1800.0,
+        300.0
         );
 
-    client2.ajouterCompte(courant2);
+    compteService.modifierCompte(courantModifie, "COURANT");
 
-    // -------------------- Banque --------------------
+    CompteBancaire* compteModifie =
+        compteService.rechercherCompteParIBAN("FR001-COURANT");
 
-    banque.ajouterClient(&client1);
-    banque.ajouterClient(&client2);
+    if (compteModifie != nullptr)
+    {
+        qDebug() << "Après modification :"
+                 << compteModifie->getIBAN()
+                 << compteModifie->getSolde();
 
-    // -------------------- Statistiques --------------------
+        delete compteModifie;
+    }
 
-    StatController stats;
+    qDebug() << "===== SUPPRESSION LOGIQUE COMPTE SERVICE =====";
 
-    qDebug() << "Nombre clients :"
-             << stats.getNombreClients(banque);
+    compteService.supprimerCompte("FR001-COURANT");
 
-    qDebug() << "Nombre comptes :"
-             << stats.getNombreComptes(banque);
+    CompteBancaire* compteFerme =
+        compteService.rechercherCompteParIBAN("FR001-COURANT");
 
-    qDebug() << "Solde total banque :"
-             << stats.getSoldeTotalBanque(banque);
+    if (compteFerme != nullptr)
+    {
+        qDebug() << "Après fermeture :"
+                 << compteFerme->getIBAN()
+                 << compteFerme->getSolde();
 
-    qDebug() << "Solde moyen par client :"
-             << stats.getSoldeMoyenClient(banque);
+        delete compteFerme;
+    }
+
+    dataManager.fermer();
 
     return 0;
 }

@@ -3,7 +3,8 @@
 
 #include "../models/comptebancaire.h"
 #include "../models/compteepargne.h"
-
+#include <QVector>
+#include "../models/comptebancaire.h"
 class CompteService
 {
 public:
@@ -29,6 +30,11 @@ public:
         );
 
     bool appliquerInterets(CompteEpargne& compte);
+    CompteBancaire* rechercherCompteParIBAN(const QString& iban);
+    QVector<CompteBancaire*> getTousLesComptes();
+    bool modifierCompte(const CompteBancaire& compte, const QString& type);
+    bool supprimerCompte(const QString& iban);
+
 };
 
 #endif

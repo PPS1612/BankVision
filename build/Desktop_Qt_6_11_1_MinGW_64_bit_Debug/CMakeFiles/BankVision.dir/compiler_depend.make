@@ -1534,6 +1534,7 @@ CMakeFiles/BankVision.dir/main.cpp.obj: C:/Users/hp/Desktop/BankVision/main.cpp 
   C:/Qt/6.11.1/mingw_64/include/QtCore/qmap.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qmath.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qmetacontainer.h \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/qmetaobject.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qmetatype.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qminmax.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qnamespace.h \
@@ -1597,6 +1598,11 @@ CMakeFiles/BankVision.dir/main.cpp.obj: C:/Users/hp/Desktop/BankVision/main.cpp 
   C:/Qt/6.11.1/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qyieldcpu.h \
+  C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlDatabase \
+  C:/Qt/6.11.1/mingw_64/include/QtSql/qsqldatabase.h \
+  C:/Qt/6.11.1/mingw_64/include/QtSql/qtsql-config.h \
+  C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlexports.h \
+  C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlglobal.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/array \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/atomic \
@@ -1819,14 +1825,19 @@ CMakeFiles/BankVision.dir/main.cpp.obj: C:/Users/hp/Desktop/BankVision/main.cpp 
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Users/hp/Desktop/BankVision/models/banque.h \
-  C:/Users/hp/Desktop/BankVision/controllers/statcontroller.h \
+  C:/Users/hp/Desktop/BankVision/models/Client.h \
   C:/Users/hp/Desktop/BankVision/models/banque.h \
   C:/Users/hp/Desktop/BankVision/models/Client.h \
   C:/Users/hp/Desktop/BankVision/models/comptebancaire.h \
   C:/Users/hp/Desktop/BankVision/models/comptecourant.h \
   C:/Users/hp/Desktop/BankVision/models/compteepargne.h \
-  C:/Users/hp/Desktop/BankVision/models/transaction.h
+  C:/Users/hp/Desktop/BankVision/models/compteprofessionnel.h \
+  C:/Users/hp/Desktop/BankVision/models/pret.h \
+  C:/Users/hp/Desktop/BankVision/models/transaction.h \
+  C:/Users/hp/Desktop/BankVision/models/utilisateur.h \
+  C:/Users/hp/Desktop/BankVision/data/datamanager.h \
+  C:/Users/hp/Desktop/BankVision/models/Client.h \
+  C:/Users/hp/Desktop/BankVision/services/clientservice.h
 
 CMakeFiles/BankVision.dir/models/Client.cpp.obj: C:/Users/hp/Desktop/BankVision/models/Client.cpp \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QDateTime \
@@ -5287,6 +5298,7 @@ CMakeFiles/BankVision.dir/services/clientservice.cpp.obj: C:/Users/hp/Desktop/Ba
   C:/Qt/6.11.1/mingw_64/include/QtCore/qmap.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qmath.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qmetacontainer.h \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/qmetaobject.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qmetatype.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qminmax.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qnamespace.h \
@@ -5349,6 +5361,11 @@ CMakeFiles/BankVision.dir/services/clientservice.cpp.obj: C:/Users/hp/Desktop/Ba
   C:/Qt/6.11.1/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qyieldcpu.h \
+  C:/Qt/6.11.1/mingw_64/include/QtSql/QSqlDatabase \
+  C:/Qt/6.11.1/mingw_64/include/QtSql/qsqldatabase.h \
+  C:/Qt/6.11.1/mingw_64/include/QtSql/qtsql-config.h \
+  C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlexports.h \
+  C:/Qt/6.11.1/mingw_64/include/QtSql/qtsqlglobal.h \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/array \
   C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/atomic \
@@ -5571,11 +5588,17 @@ CMakeFiles/BankVision.dir/services/clientservice.cpp.obj: C:/Users/hp/Desktop/Ba
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
+  C:/Users/hp/Desktop/BankVision/data/datamanager.h \
   C:/Users/hp/Desktop/BankVision/models/Client.h \
   C:/Users/hp/Desktop/BankVision/models/banque.h \
   C:/Users/hp/Desktop/BankVision/models/Client.h \
   C:/Users/hp/Desktop/BankVision/models/comptebancaire.h \
+  C:/Users/hp/Desktop/BankVision/models/comptecourant.h \
+  C:/Users/hp/Desktop/BankVision/models/compteepargne.h \
+  C:/Users/hp/Desktop/BankVision/models/compteprofessionnel.h \
+  C:/Users/hp/Desktop/BankVision/models/pret.h \
   C:/Users/hp/Desktop/BankVision/models/transaction.h \
+  C:/Users/hp/Desktop/BankVision/models/utilisateur.h \
   C:/Users/hp/Desktop/BankVision/services/clientservice.h
 
 CMakeFiles/BankVision.dir/services/compteservice.cpp.obj: C:/Users/hp/Desktop/BankVision/services/compteservice.cpp \

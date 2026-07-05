@@ -11,6 +11,8 @@
 #include "../models/compteprofessionnel.h"
 #include "../models/transaction.h"
 #include "../models/pret.h"
+#include <QVector>
+
 
 class DataManager
 {
@@ -59,6 +61,22 @@ public:
         );
 
     bool sauvegarderPret(const Pret& pret, int clientId);
+
+    QVector<Client*> getTousLesClients();
+    bool modifierClient(const Client& client);
+    bool supprimerClient(int id);
+
+    CompteBancaire* rechercherCompteParIBAN(const QString& iban);
+    QVector<CompteBancaire*> getTousLesComptes();
+    bool modifierCompte(const CompteBancaire& compte, const QString& type);
+    bool supprimerCompte(const QString& iban);
+
+    QVector<Transaction*> getTransactionsCompte(const QString& iban);
+
+    Pret* rechercherPretParId(int id);
+    QVector<Pret*> getTousLesPrets();
+    bool modifierStatutPret(int id, StatutPret statut);
+    bool supprimerPret(int id);
 };
 
 #endif // DATAMANAGER_H

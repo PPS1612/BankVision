@@ -15,10 +15,6 @@ DataManager& DataManager::getInstance()
     return instance;
 }
 
-//=====================================================
-// Gestion de la base de données
-//=====================================================
-
 bool DataManager::initialiser(const QString& cheminBase)
 {
     database = QSqlDatabase::addDatabase("QSQLITE");
@@ -31,13 +27,12 @@ bool DataManager::initialiser(const QString& cheminBase)
     }
 
     qDebug() << "Base de données ouverte avec succès.";
-
     return creerTables();
 }
 
 void DataManager::fermer()
 {
-    if(database.isOpen())
+    if (database.isOpen())
     {
         database.close();
         qDebug() << "Base de données fermée.";
@@ -48,10 +43,6 @@ QSqlDatabase DataManager::getDatabase() const
 {
     return database;
 }
-
-//=====================================================
-// Création des tables
-//=====================================================
 
 bool DataManager::creerTables()
 {
@@ -67,7 +58,7 @@ bool DataManager::creerTables()
         ")"
         );
 
-    if(!ok)
+    if (!ok)
     {
         qDebug() << "Erreur création table clients :" << query.lastError().text();
         return false;
@@ -84,7 +75,7 @@ bool DataManager::creerTables()
         ")"
         );
 
-    if(!ok)
+    if (!ok)
     {
         qDebug() << "Erreur création table utilisateurs :" << query.lastError().text();
         return false;
@@ -97,11 +88,16 @@ bool DataManager::creerTables()
         "type TEXT NOT NULL,"
         "solde REAL NOT NULL,"
         "statut TEXT NOT NULL,"
+        "decouvert_autorise REAL,"
+        "taux_interet REAL,"
+        "nom_entreprise TEXT,"
+        "plafond_retrait REAL,"
+        "plafond_virement REAL,"
         "FOREIGN KEY(client_id) REFERENCES clients(id)"
         ")"
         );
 
-    if(!ok)
+    if (!ok)
     {
         qDebug() << "Erreur création table comptes :" << query.lastError().text();
         return false;
@@ -120,7 +116,7 @@ bool DataManager::creerTables()
         ")"
         );
 
-    if(!ok)
+    if (!ok)
     {
         qDebug() << "Erreur création table transactions :" << query.lastError().text();
         return false;
@@ -146,13 +142,8 @@ bool DataManager::creerTables()
     }
 
     qDebug() << "Tables créées avec succès.";
-
     return true;
 }
-
-//=====================================================
-// Gestion des clients
-//=====================================================
 
 bool DataManager::sauvegarderClient(const Client& client)
 {
@@ -170,14 +161,13 @@ bool DataManager::sauvegarderClient(const Client& client)
     query.bindValue(":telephone", client.getTelephone());
     query.bindValue(":statut", client.estActif() ? "ACTIF" : "INACTIF");
 
-    if(!query.exec())
+    if (!query.exec())
     {
         qDebug() << "Erreur sauvegarde client :" << query.lastError().text();
         return false;
     }
 
     qDebug() << "Client sauvegardé :" << client.getNom();
-
     return true;
 }
 
@@ -187,19 +177,18 @@ Client* DataManager::rechercherClientParId(int id)
 
     query.prepare(
         "SELECT id, nom, email, telephone, statut "
-        "FROM clients "
-        "WHERE id = :id"
+        "FROM clients WHERE id = :id"
         );
 
     query.bindValue(":id", id);
 
-    if(!query.exec())
+    if (!query.exec())
     {
         qDebug() << "Erreur recherche client :" << query.lastError().text();
         return nullptr;
     }
 
-    if(query.next())
+    if (query.next())
     {
         Client* client = new Client(
             query.value("id").toInt(),
@@ -208,10 +197,8 @@ Client* DataManager::rechercherClientParId(int id)
             query.value("telephone").toString()
             );
 
-        if(query.value("statut").toString() == "INACTIF")
-        {
+        if (query.value("statut").toString() == "INACTIF")
             client->setStatut(StatutClient::INACTIF);
-        }
 
         return client;
     }
@@ -219,9 +206,84 @@ Client* DataManager::rechercherClientParId(int id)
     return nullptr;
 }
 
-//=====================================================
-// Gestion des utilisateurs
-//=====================================================
+QVector<Client*> DataManager::getTousLesClients()
+{
+    QVector<Client*> clients;
+    QSqlQuery query(database);
+
+    if (!query.exec("SELECT id, nom, email, telephone, statut FROM clients"))
+    {
+        qDebug() << "Erreur chargement clients :" << query.lastError().text();
+        return clients;
+    }
+
+    while (query.next())
+    {
+        Client* client = new Client(
+            query.value("id").toInt(),
+            query.value("nom").toString(),
+            query.value("email").toString(),
+            query.value("telephone").toString()
+            );
+
+        if (query.value("statut").toString() == "INACTIF")
+            client->setStatut(StatutClient::INACTIF);
+
+        clients.append(client);
+    }
+
+    return clients;
+}
+
+bool DataManager::modifierClient(const Client& client)
+{
+    QSqlQuery query(database);
+
+    query.prepare(
+        "UPDATE clients SET "
+        "nom = :nom, "
+        "email = :email, "
+        "telephone = :telephone, "
+        "statut = :statut "
+        "WHERE id = :id"
+        );
+
+    query.bindValue(":id", client.getId());
+    query.bindValue(":nom", client.getNom());
+    query.bindValue(":email", client.getEmail());
+    query.bindValue(":telephone", client.getTelephone());
+    query.bindValue(":statut", client.estActif() ? "ACTIF" : "INACTIF");
+
+    if (!query.exec())
+    {
+        qDebug() << "Erreur modification client :" << query.lastError().text();
+        return false;
+    }
+
+    qDebug() << "Client modifié :" << client.getNom();
+    return true;
+}
+
+bool DataManager::supprimerClient(int id)
+{
+    QSqlQuery query(database);
+
+    query.prepare(
+        "UPDATE clients SET statut = 'INACTIF' "
+        "WHERE id = :id"
+        );
+
+    query.bindValue(":id", id);
+
+    if (!query.exec())
+    {
+        qDebug() << "Erreur suppression logique client :" << query.lastError().text();
+        return false;
+    }
+
+    qDebug() << "Client désactivé ID :" << id;
+    return true;
+}
 
 bool DataManager::sauvegarderUtilisateur(const Utilisateur& utilisateur)
 {
@@ -235,9 +297,9 @@ bool DataManager::sauvegarderUtilisateur(const Utilisateur& utilisateur)
 
     QString role = "CLIENT";
 
-    if(utilisateur.getRole() == RoleUtilisateur::ADMIN)
+    if (utilisateur.getRole() == RoleUtilisateur::ADMIN)
         role = "ADMIN";
-    else if(utilisateur.getRole() == RoleUtilisateur::CONSEILLER)
+    else if (utilisateur.getRole() == RoleUtilisateur::CONSEILLER)
         role = "CONSEILLER";
 
     QString statut = utilisateur.estActif() ? "ACTIF" : "BLOQUE";
@@ -249,14 +311,13 @@ bool DataManager::sauvegarderUtilisateur(const Utilisateur& utilisateur)
     query.bindValue(":role", role);
     query.bindValue(":statut", statut);
 
-    if(!query.exec())
+    if (!query.exec())
     {
         qDebug() << "Erreur sauvegarde utilisateur :" << query.lastError().text();
         return false;
     }
 
     qDebug() << "Utilisateur sauvegardé :" << utilisateur.getLogin();
-
     return true;
 }
 
@@ -264,30 +325,27 @@ Utilisateur* DataManager::rechercherUtilisateurParLogin(const QString& login)
 {
     QSqlQuery query(database);
 
-    query.prepare(
-        "SELECT * FROM utilisateurs WHERE login = :login"
-        );
-
+    query.prepare("SELECT * FROM utilisateurs WHERE login = :login");
     query.bindValue(":login", login);
 
-    if(!query.exec())
+    if (!query.exec())
     {
         qDebug() << "Erreur recherche utilisateur :" << query.lastError().text();
         return nullptr;
     }
 
-    if(query.next())
+    if (query.next())
     {
         RoleUtilisateur role = RoleUtilisateur::CLIENT;
 
-        if(query.value("role").toString() == "ADMIN")
+        if (query.value("role").toString() == "ADMIN")
             role = RoleUtilisateur::ADMIN;
-        else if(query.value("role").toString() == "CONSEILLER")
+        else if (query.value("role").toString() == "CONSEILLER")
             role = RoleUtilisateur::CONSEILLER;
 
         StatutUtilisateur statut = StatutUtilisateur::ACTIF;
 
-        if(query.value("statut").toString() == "BLOQUE")
+        if (query.value("statut").toString() == "BLOQUE")
             statut = StatutUtilisateur::BLOQUE;
 
         return new Utilisateur(
@@ -313,8 +371,9 @@ bool DataManager::sauvegarderCompte(
 
     query.prepare(
         "INSERT OR REPLACE INTO comptes "
-        "(iban, client_id, type, solde, statut) "
-        "VALUES (:iban, :client_id, :type, :solde, :statut)"
+        "(iban, client_id, type, solde, statut, decouvert_autorise, taux_interet, "
+        "nom_entreprise, plafond_retrait, plafond_virement) "
+        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
         );
 
     QString statut = "ACTIF";
@@ -324,11 +383,37 @@ bool DataManager::sauvegarderCompte(
     else if (compte.getStatut() == StatutCompte::FERME)
         statut = "FERME";
 
-    query.bindValue(":iban", compte.getIBAN());
-    query.bindValue(":client_id", clientId);
-    query.bindValue(":type", type);
-    query.bindValue(":solde", compte.getSolde());
-    query.bindValue(":statut", statut);
+    QVariant decouvert;
+    QVariant taux;
+    QVariant entreprise;
+    QVariant plafondRetrait;
+    QVariant plafondVirement;
+
+    if (const CompteCourant* c = dynamic_cast<const CompteCourant*>(&compte))
+    {
+        decouvert = c->getDecouvertAutorise();
+    }
+    else if (const CompteEpargne* e = dynamic_cast<const CompteEpargne*>(&compte))
+    {
+        taux = e->getTauxInteret();
+    }
+    else if (const CompteProfessionnel* p = dynamic_cast<const CompteProfessionnel*>(&compte))
+    {
+        entreprise = p->getNomEntreprise();
+        plafondRetrait = p->getPlafondRetrait();
+        plafondVirement = p->getPlafondVirement();
+    }
+
+    query.addBindValue(compte.getIBAN());
+    query.addBindValue(clientId);
+    query.addBindValue(type);
+    query.addBindValue(compte.getSolde());
+    query.addBindValue(statut);
+    query.addBindValue(decouvert);
+    query.addBindValue(taux);
+    query.addBindValue(entreprise);
+    query.addBindValue(plafondRetrait);
+    query.addBindValue(plafondVirement);
 
     if (!query.exec())
     {
@@ -340,10 +425,129 @@ bool DataManager::sauvegarderCompte(
     return true;
 }
 
+CompteBancaire* DataManager::rechercherCompteParIBAN(const QString& iban)
+{
+    QSqlQuery query(database);
+
+    query.prepare("SELECT * FROM comptes WHERE iban = :iban");
+    query.bindValue(":iban", iban);
+
+    if (!query.exec())
+    {
+        qDebug() << "Erreur recherche compte :" << query.lastError().text();
+        return nullptr;
+    }
+
+    if (query.next())
+    {
+        QString type = query.value("type").toString();
+
+        if (type == "COURANT")
+        {
+            return new CompteCourant(
+                query.value("iban").toString(),
+                query.value("solde").toDouble(),
+                query.value("decouvert_autorise").toDouble()
+                );
+        }
+
+        if (type == "EPARGNE")
+        {
+            return new CompteEpargne(
+                query.value("iban").toString(),
+                query.value("solde").toDouble(),
+                query.value("taux_interet").toDouble()
+                );
+        }
+
+        if (type == "PROFESSIONNEL")
+        {
+            return new CompteProfessionnel(
+                query.value("iban").toString(),
+                query.value("solde").toDouble(),
+                query.value("nom_entreprise").toString(),
+                query.value("plafond_retrait").toDouble(),
+                query.value("plafond_virement").toDouble()
+                );
+        }
+    }
+
+    return nullptr;
+}
+
+QVector<CompteBancaire*> DataManager::getTousLesComptes()
+{
+    QVector<CompteBancaire*> comptes;
+    QSqlQuery query(database);
+
+    if (!query.exec("SELECT iban FROM comptes"))
+    {
+        qDebug() << "Erreur liste comptes :" << query.lastError().text();
+        return comptes;
+    }
+
+    while (query.next())
+    {
+        CompteBancaire* compte =
+            rechercherCompteParIBAN(query.value("iban").toString());
+
+        if (compte != nullptr)
+            comptes.append(compte);
+    }
+
+    return comptes;
+}
+
+bool DataManager::modifierCompte(const CompteBancaire& compte, const QString& type)
+{
+    QSqlQuery query(database);
+
+    query.prepare(
+        "UPDATE comptes SET "
+        "type = :type, "
+        "solde = :solde "
+        "WHERE iban = :iban"
+        );
+
+    query.bindValue(":iban", compte.getIBAN());
+    query.bindValue(":type", type);
+    query.bindValue(":solde", compte.getSolde());
+
+    if (!query.exec())
+    {
+        qDebug() << "Erreur modification compte :" << query.lastError().text();
+        return false;
+    }
+
+    qDebug() << "Compte modifié :" << compte.getIBAN();
+    return true;
+}
+
+bool DataManager::supprimerCompte(const QString& iban)
+{
+    QSqlQuery query(database);
+
+    query.prepare(
+        "UPDATE comptes SET statut = 'FERME' "
+        "WHERE iban = :iban"
+        );
+
+    query.bindValue(":iban", iban);
+
+    if (!query.exec())
+    {
+        qDebug() << "Erreur suppression logique compte :" << query.lastError().text();
+        return false;
+    }
+
+    qDebug() << "Compte fermé :" << iban;
+    return true;
+}
 
 bool DataManager::sauvegarderTransaction(
     const Transaction& transaction,
-    const QString& ibanCompte)
+    const QString& ibanCompte
+    )
 {
     QSqlQuery query(database);
 
@@ -363,15 +567,13 @@ bool DataManager::sauvegarderTransaction(
 
     if (!query.exec())
     {
-        qDebug() << "Erreur sauvegarde transaction :"
-                 << query.lastError().text();
+        qDebug() << "Erreur sauvegarde transaction :" << query.lastError().text();
         return false;
     }
 
     qDebug() << "Transaction enregistrée.";
     return true;
 }
-
 
 bool DataManager::sauvegarderPret(const Pret& pret, int clientId)
 {
@@ -408,5 +610,155 @@ bool DataManager::sauvegarderPret(const Pret& pret, int clientId)
     }
 
     qDebug() << "Prêt sauvegardé ID :" << pret.getId();
+    return true;
+}
+
+QVector<Transaction*> DataManager::getTransactionsCompte(const QString& iban)
+{
+    QVector<Transaction*> transactions;
+
+    QSqlQuery query(database);
+
+    query.prepare(
+        "SELECT id, type, montant, solde_apres, description "
+        "FROM transactions "
+        "WHERE iban = :iban "
+        "ORDER BY date DESC"
+        );
+
+    query.bindValue(":iban", iban);
+
+    if (!query.exec())
+    {
+        qDebug() << "Erreur chargement transactions :"
+                 << query.lastError().text();
+        return transactions;
+    }
+
+    while (query.next())
+    {
+        Transaction* transaction = new Transaction(
+            query.value("id").toInt(),
+            query.value("type").toString(),
+            query.value("montant").toDouble(),
+            query.value("solde_apres").toDouble(),
+            query.value("description").toString()
+            );
+
+        transactions.append(transaction);
+    }
+
+    return transactions;
+}
+
+Pret* DataManager::rechercherPretParId(int id)
+{
+    QSqlQuery query(database);
+
+    query.prepare(
+        "SELECT * FROM prets WHERE id = :id"
+        );
+
+    query.bindValue(":id", id);
+
+    if (!query.exec())
+    {
+        qDebug() << "Erreur recherche prêt :" << query.lastError().text();
+        return nullptr;
+    }
+
+    if (query.next())
+    {
+        Pret* pret = new Pret(
+            query.value("id").toInt(),
+            query.value("montant").toDouble(),
+            query.value("taux_annuel").toDouble(),
+            query.value("duree_mois").toInt()
+            );
+
+        QString statutTexte = query.value("statut").toString();
+
+        if (statutTexte == "ACCEPTE")
+            pret->setStatut(StatutPret::ACCEPTE);
+        else if (statutTexte == "REFUSE")
+            pret->setStatut(StatutPret::REFUSE);
+        else if (statutTexte == "REMBOURSE")
+            pret->setStatut(StatutPret::REMBOURSE);
+
+        return pret;
+    }
+
+    return nullptr;
+}
+
+QVector<Pret*> DataManager::getTousLesPrets()
+{
+    QVector<Pret*> prets;
+    QSqlQuery query(database);
+
+    if (!query.exec("SELECT id FROM prets"))
+    {
+        qDebug() << "Erreur liste prêts :" << query.lastError().text();
+        return prets;
+    }
+
+    while (query.next())
+    {
+        Pret* pret = rechercherPretParId(query.value("id").toInt());
+
+        if (pret != nullptr)
+            prets.append(pret);
+    }
+
+    return prets;
+}
+
+bool DataManager::modifierStatutPret(int id, StatutPret statut)
+{
+    QSqlQuery query(database);
+
+    QString statutTexte = "EN_ATTENTE";
+
+    if (statut == StatutPret::ACCEPTE)
+        statutTexte = "ACCEPTE";
+    else if (statut == StatutPret::REFUSE)
+        statutTexte = "REFUSE";
+    else if (statut == StatutPret::REMBOURSE)
+        statutTexte = "REMBOURSE";
+
+    query.prepare(
+        "UPDATE prets SET statut = :statut WHERE id = :id"
+        );
+
+    query.bindValue(":id", id);
+    query.bindValue(":statut", statutTexte);
+
+    if (!query.exec())
+    {
+        qDebug() << "Erreur modification statut prêt :" << query.lastError().text();
+        return false;
+    }
+
+    qDebug() << "Statut prêt modifié ID :" << id;
+    return true;
+}
+
+bool DataManager::supprimerPret(int id)
+{
+    QSqlQuery query(database);
+
+    query.prepare(
+        "UPDATE prets SET statut = 'REFUSE' WHERE id = :id"
+        );
+
+    query.bindValue(":id", id);
+
+    if (!query.exec())
+    {
+        qDebug() << "Erreur suppression logique prêt :" << query.lastError().text();
+        return false;
+    }
+
+    qDebug() << "Prêt supprimé logiquement ID :" << id;
     return true;
 }
