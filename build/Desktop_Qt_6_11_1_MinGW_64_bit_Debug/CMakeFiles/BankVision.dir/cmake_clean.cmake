@@ -36,6 +36,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/BankVision.dir/services/clientservice.cpp.obj.d"
   "CMakeFiles/BankVision.dir/services/compteservice.cpp.obj"
   "CMakeFiles/BankVision.dir/services/compteservice.cpp.obj.d"
+  "CMakeFiles/BankVision.dir/services/pretservice.cpp.obj"
+  "CMakeFiles/BankVision.dir/services/pretservice.cpp.obj.d"
+  "CMakeFiles/BankVision.dir/services/statservice.cpp.obj"
+  "CMakeFiles/BankVision.dir/services/statservice.cpp.obj.d"
+  "CMakeFiles/BankVision.dir/services/transactionservice.cpp.obj"
+  "CMakeFiles/BankVision.dir/services/transactionservice.cpp.obj.d"
   "libBankVision.dll.a"
 )
 

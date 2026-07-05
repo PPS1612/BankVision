@@ -536,6 +536,78 @@ services/compteservice.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/services/compteservice.cpp.s
 .PHONY : services/compteservice.cpp.s
 
+services/pretservice.obj: services/pretservice.cpp.obj
+.PHONY : services/pretservice.obj
+
+# target to build an object file
+services/pretservice.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/services/pretservice.cpp.obj
+.PHONY : services/pretservice.cpp.obj
+
+services/pretservice.i: services/pretservice.cpp.i
+.PHONY : services/pretservice.i
+
+# target to preprocess a source file
+services/pretservice.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/services/pretservice.cpp.i
+.PHONY : services/pretservice.cpp.i
+
+services/pretservice.s: services/pretservice.cpp.s
+.PHONY : services/pretservice.s
+
+# target to generate assembly for a file
+services/pretservice.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/services/pretservice.cpp.s
+.PHONY : services/pretservice.cpp.s
+
+services/statservice.obj: services/statservice.cpp.obj
+.PHONY : services/statservice.obj
+
+# target to build an object file
+services/statservice.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/services/statservice.cpp.obj
+.PHONY : services/statservice.cpp.obj
+
+services/statservice.i: services/statservice.cpp.i
+.PHONY : services/statservice.i
+
+# target to preprocess a source file
+services/statservice.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/services/statservice.cpp.i
+.PHONY : services/statservice.cpp.i
+
+services/statservice.s: services/statservice.cpp.s
+.PHONY : services/statservice.s
+
+# target to generate assembly for a file
+services/statservice.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/services/statservice.cpp.s
+.PHONY : services/statservice.cpp.s
+
+services/transactionservice.obj: services/transactionservice.cpp.obj
+.PHONY : services/transactionservice.obj
+
+# target to build an object file
+services/transactionservice.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/services/transactionservice.cpp.obj
+.PHONY : services/transactionservice.cpp.obj
+
+services/transactionservice.i: services/transactionservice.cpp.i
+.PHONY : services/transactionservice.i
+
+# target to preprocess a source file
+services/transactionservice.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/services/transactionservice.cpp.i
+.PHONY : services/transactionservice.cpp.i
+
+services/transactionservice.s: services/transactionservice.cpp.s
+.PHONY : services/transactionservice.s
+
+# target to generate assembly for a file
+services/transactionservice.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/services/transactionservice.cpp.s
+.PHONY : services/transactionservice.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -596,6 +668,15 @@ help:
 	@echo ... services/compteservice.obj
 	@echo ... services/compteservice.i
 	@echo ... services/compteservice.s
+	@echo ... services/pretservice.obj
+	@echo ... services/pretservice.i
+	@echo ... services/pretservice.s
+	@echo ... services/statservice.obj
+	@echo ... services/statservice.i
+	@echo ... services/statservice.s
+	@echo ... services/transactionservice.obj
+	@echo ... services/transactionservice.i
+	@echo ... services/transactionservice.s
 .PHONY : help
 
 

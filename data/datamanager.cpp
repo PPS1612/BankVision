@@ -762,3 +762,41 @@ bool DataManager::supprimerPret(int id)
     qDebug() << "Prêt supprimé logiquement ID :" << id;
     return true;
 }
+
+
+QVector<Transaction> DataManager::getHistoriqueCompte(const QString& ibanCompte)
+{
+    QVector<Transaction> historique;
+    QSqlQuery query(database);
+
+    query.prepare(
+        "SELECT id, type, montant, solde_apres, description "
+        "FROM transactions "
+        "WHERE iban = :iban "
+        "ORDER BY date DESC"
+        );
+
+    query.bindValue(":iban", ibanCompte);
+
+    if (!query.exec())
+    {
+        qDebug() << "Erreur historique :"
+                 << query.lastError().text();
+        return historique;
+    }
+
+    while (query.next())
+    {
+        Transaction transaction(
+            query.value("id").toInt(),
+            query.value("type").toString(),
+            query.value("montant").toDouble(),
+            query.value("solde_apres").toDouble(),
+            query.value("description").toString()
+            );
+
+        historique.append(transaction);
+    }
+
+    return historique;
+}

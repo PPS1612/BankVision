@@ -1,19 +1,36 @@
 CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj: \
  C:\Users\hp\Desktop\BankVision\services\banqueservice.cpp \
  C:\Users\hp\Desktop\BankVision\services\banqueservice.h \
- C:/Users/hp/Desktop/BankVision/models/banque.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qstring.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qchar.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qglobal.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QVector \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qvector.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qlist.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qarraydatapointer.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qarraydataops.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qarraydata.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qpair.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qcontainerfwd.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qtconfigmacros.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qtconfiginclude.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/version \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/pstl_config.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstddef \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h \
- C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/stddef.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qconfig.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qtcore-config.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qtdeprecationdefinitions.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qcompilerdetection.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qprocessordetection.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qsystemdetection.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/utility \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_relops.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_pair.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/move.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qtversionchecks.h \
+ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/assert.h \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/crtdefs.h \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/corecrt.h \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw.h \
@@ -21,16 +38,6 @@ CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_secapi.h \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/utility \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_relops.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_pair.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/move.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
- C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/stdint.h \
- C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/assert.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdlib.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdlib \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/stdlib.h \
@@ -43,29 +50,25 @@ CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/errno.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_abs.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtcoreglobal.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtversionchecks.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtconfiginclude.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/version \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qconfig.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtcore-config.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtconfigmacros.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtdeprecationdefinitions.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qcompilerdetection.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qprocessordetection.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qsystemdetection.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qtypes.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qassert.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtcoreexports.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtdeprecationmarkers.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtclasshelpermacros.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtpreprocessorsupport.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qassert.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtnoop.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtypes.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstddef \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h \
+ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/stddef.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
+ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/stdint.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/limits \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qglobal.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qtcoreglobal.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qtpreprocessorsupport.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtversion.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtypeinfo.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qcontainerfwd.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/limits \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qsysinfo.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qlogging.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qflags.h \
@@ -152,47 +155,8 @@ CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtresource.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qttranslation.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qversiontagging.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qcompare.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qstdlibdetection.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qcomparehelpers.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/functional \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_function.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/binders.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/refwrap.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_function.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/unordered_map \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_map.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable_policy.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/alloc_traits.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/alloc_traits.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memoryfwd.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocator.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/new_allocator.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/node_handle.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/erase_if.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memory_resource.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator_args.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_uninitialized.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_vector.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_bvector.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/array \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/compare \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qstringview.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qbytearray.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qrefcount.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qnamespace.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qtmetamacros.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qarraydata.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qpair.h \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/string.h \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qarraydatapointer.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qarraydataops.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qcontainertools_impl.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qxptype_traits.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/q23type_traits.h \
@@ -201,6 +165,7 @@ CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stream_iterator.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memoryfwd.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/postypes.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwchar \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
@@ -240,9 +205,18 @@ CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/char_traits.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocator.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/new_allocator.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream_insert.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_forced.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_function.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/binders.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/refwrap.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/alloc_traits.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/alloc_traits.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string_view \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/string_view.tcc \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h \
@@ -250,12 +224,15 @@ CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/charconv.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memory_resource.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator_args.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.tcc \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/system_error \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdexcept \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf.tcc \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/memory \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_uninitialized.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_raw_storage_iter.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/align.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_ptr.h \
@@ -266,9 +243,34 @@ CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_atomic.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/auto_ptr.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qnamespace.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qcompare.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qstdlibdetection.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qcomparehelpers.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/functional \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_function.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/unordered_map \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_map.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable_policy.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/node_handle.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/erase_if.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_vector.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_bvector.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/array \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/compare \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qtmetamacros.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/q20functional.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/q20memory.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/q17memory.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qhashfunctions.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qstring.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qchar.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qstringview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qbytearray.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qrefcount.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qbytearrayalgorithms.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/stdarg.h \
@@ -283,10 +285,6 @@ CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qstringbuilder.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qstringconverter.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qstringconverter_base.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/QVector \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qvector.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qlist.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qhashfunctions.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numeric \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_numeric.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h \
@@ -296,6 +294,8 @@ CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qalgorithms.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/q20bit.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qstringmatcher.h \
+ C:/Users/hp/Desktop/BankVision/models/banque.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
  C:/Users/hp/Desktop/BankVision/models/client.h \
  C:/Users/hp/Desktop/BankVision/models/comptebancaire.h \
  C:/Users/hp/Desktop/BankVision/models/transaction.h \
@@ -354,6 +354,7 @@ CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qobject_impl.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qbindingstorage.h \
  C:/Users/hp/Desktop/BankVision/models/Client.h \
+ C:/Users/hp/Desktop/BankVision/models/comptebancaire.h \
  C:/Users/hp/Desktop/BankVision/models/comptecourant.h \
  C:/Users/hp/Desktop/BankVision/models/compteepargne.h \
  C:/Users/hp/Desktop/BankVision/models/compteprofessionnel.h

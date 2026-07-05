@@ -323,6 +323,51 @@ CMakeFiles/BankVision.dir/controllers/statcontroller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BankVision.dir/controllers/statcontroller.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hp\Desktop\BankVision\controllers\statcontroller.cpp -o CMakeFiles\BankVision.dir\controllers\statcontroller.cpp.s
 
+CMakeFiles/BankVision.dir/services/transactionservice.cpp.obj: CMakeFiles/BankVision.dir/flags.make
+CMakeFiles/BankVision.dir/services/transactionservice.cpp.obj: CMakeFiles/BankVision.dir/includes_CXX.rsp
+CMakeFiles/BankVision.dir/services/transactionservice.cpp.obj: C:/Users/hp/Desktop/BankVision/services/transactionservice.cpp
+CMakeFiles/BankVision.dir/services/transactionservice.cpp.obj: CMakeFiles/BankVision.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/BankVision.dir/services/transactionservice.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BankVision.dir/services/transactionservice.cpp.obj -MF CMakeFiles\BankVision.dir\services\transactionservice.cpp.obj.d -o CMakeFiles\BankVision.dir\services\transactionservice.cpp.obj -c C:\Users\hp\Desktop\BankVision\services\transactionservice.cpp
+
+CMakeFiles/BankVision.dir/services/transactionservice.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BankVision.dir/services/transactionservice.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hp\Desktop\BankVision\services\transactionservice.cpp > CMakeFiles\BankVision.dir\services\transactionservice.cpp.i
+
+CMakeFiles/BankVision.dir/services/transactionservice.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BankVision.dir/services/transactionservice.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hp\Desktop\BankVision\services\transactionservice.cpp -o CMakeFiles\BankVision.dir\services\transactionservice.cpp.s
+
+CMakeFiles/BankVision.dir/services/pretservice.cpp.obj: CMakeFiles/BankVision.dir/flags.make
+CMakeFiles/BankVision.dir/services/pretservice.cpp.obj: CMakeFiles/BankVision.dir/includes_CXX.rsp
+CMakeFiles/BankVision.dir/services/pretservice.cpp.obj: C:/Users/hp/Desktop/BankVision/services/pretservice.cpp
+CMakeFiles/BankVision.dir/services/pretservice.cpp.obj: CMakeFiles/BankVision.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/BankVision.dir/services/pretservice.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BankVision.dir/services/pretservice.cpp.obj -MF CMakeFiles\BankVision.dir\services\pretservice.cpp.obj.d -o CMakeFiles\BankVision.dir\services\pretservice.cpp.obj -c C:\Users\hp\Desktop\BankVision\services\pretservice.cpp
+
+CMakeFiles/BankVision.dir/services/pretservice.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BankVision.dir/services/pretservice.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hp\Desktop\BankVision\services\pretservice.cpp > CMakeFiles\BankVision.dir\services\pretservice.cpp.i
+
+CMakeFiles/BankVision.dir/services/pretservice.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BankVision.dir/services/pretservice.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hp\Desktop\BankVision\services\pretservice.cpp -o CMakeFiles\BankVision.dir\services\pretservice.cpp.s
+
+CMakeFiles/BankVision.dir/services/statservice.cpp.obj: CMakeFiles/BankVision.dir/flags.make
+CMakeFiles/BankVision.dir/services/statservice.cpp.obj: CMakeFiles/BankVision.dir/includes_CXX.rsp
+CMakeFiles/BankVision.dir/services/statservice.cpp.obj: C:/Users/hp/Desktop/BankVision/services/statservice.cpp
+CMakeFiles/BankVision.dir/services/statservice.cpp.obj: CMakeFiles/BankVision.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/BankVision.dir/services/statservice.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BankVision.dir/services/statservice.cpp.obj -MF CMakeFiles\BankVision.dir\services\statservice.cpp.obj.d -o CMakeFiles\BankVision.dir\services\statservice.cpp.obj -c C:\Users\hp\Desktop\BankVision\services\statservice.cpp
+
+CMakeFiles/BankVision.dir/services/statservice.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BankVision.dir/services/statservice.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hp\Desktop\BankVision\services\statservice.cpp > CMakeFiles\BankVision.dir\services\statservice.cpp.i
+
+CMakeFiles/BankVision.dir/services/statservice.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BankVision.dir/services/statservice.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hp\Desktop\BankVision\services\statservice.cpp -o CMakeFiles\BankVision.dir\services\statservice.cpp.s
+
 # Object files for target BankVision
 BankVision_OBJECTS = \
 "CMakeFiles/BankVision.dir/main.cpp.obj" \
@@ -341,7 +386,10 @@ BankVision_OBJECTS = \
 "CMakeFiles/BankVision.dir/models/utilisateur.cpp.obj" \
 "CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.obj" \
 "CMakeFiles/BankVision.dir/controllers/comptecontroller.cpp.obj" \
-"CMakeFiles/BankVision.dir/controllers/statcontroller.cpp.obj"
+"CMakeFiles/BankVision.dir/controllers/statcontroller.cpp.obj" \
+"CMakeFiles/BankVision.dir/services/transactionservice.cpp.obj" \
+"CMakeFiles/BankVision.dir/services/pretservice.cpp.obj" \
+"CMakeFiles/BankVision.dir/services/statservice.cpp.obj"
 
 # External object files for target BankVision
 BankVision_EXTERNAL_OBJECTS =
@@ -363,6 +411,9 @@ BankVision.exe: CMakeFiles/BankVision.dir/models/utilisateur.cpp.obj
 BankVision.exe: CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.obj
 BankVision.exe: CMakeFiles/BankVision.dir/controllers/comptecontroller.cpp.obj
 BankVision.exe: CMakeFiles/BankVision.dir/controllers/statcontroller.cpp.obj
+BankVision.exe: CMakeFiles/BankVision.dir/services/transactionservice.cpp.obj
+BankVision.exe: CMakeFiles/BankVision.dir/services/pretservice.cpp.obj
+BankVision.exe: CMakeFiles/BankVision.dir/services/statservice.cpp.obj
 BankVision.exe: CMakeFiles/BankVision.dir/build.make
 BankVision.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Widgets.a
 BankVision.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Sql.a
@@ -371,7 +422,7 @@ BankVision.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6Core.a
 BankVision.exe: CMakeFiles/BankVision.dir/linkLibs.rsp
 BankVision.exe: CMakeFiles/BankVision.dir/objects1.rsp
 BankVision.exe: CMakeFiles/BankVision.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable BankVision.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable BankVision.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\BankVision.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -25,6 +25,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/hp/Desktop/BankVision/services/banqueservice.cpp" "CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/services/banqueservice.cpp.obj.d"
   "C:/Users/hp/Desktop/BankVision/services/clientservice.cpp" "CMakeFiles/BankVision.dir/services/clientservice.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/services/clientservice.cpp.obj.d"
   "C:/Users/hp/Desktop/BankVision/services/compteservice.cpp" "CMakeFiles/BankVision.dir/services/compteservice.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/services/compteservice.cpp.obj.d"
+  "C:/Users/hp/Desktop/BankVision/services/pretservice.cpp" "CMakeFiles/BankVision.dir/services/pretservice.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/services/pretservice.cpp.obj.d"
+  "C:/Users/hp/Desktop/BankVision/services/statservice.cpp" "CMakeFiles/BankVision.dir/services/statservice.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/services/statservice.cpp.obj.d"
+  "C:/Users/hp/Desktop/BankVision/services/transactionservice.cpp" "CMakeFiles/BankVision.dir/services/transactionservice.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/services/transactionservice.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

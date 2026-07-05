@@ -39,5 +39,8 @@ add_executable(BankVision
     controllers/authcontroller.h controllers/authcontroller.cpp
     controllers/comptecontroller.h controllers/comptecontroller.cpp
     controllers/statcontroller.h controllers/statcontroller.cpp
+    services/transactionservice.h services/transactionservice.cpp
+    services/pretservice.h services/pretservice.cpp
+    services/statservice.h services/statservice.cpp
 )
 target_link_libraries(BankVision PRIVATE Qt6::Core Qt6::Widgets Qt6::Sql)

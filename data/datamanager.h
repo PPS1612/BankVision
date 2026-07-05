@@ -77,6 +77,7 @@ public:
     QVector<Pret*> getTousLesPrets();
     bool modifierStatutPret(int id, StatutPret statut);
     bool supprimerPret(int id);
+    QVector<Transaction> getHistoriqueCompte(const QString& ibanCompte);
 };
 
 #endif // DATAMANAGER_H
