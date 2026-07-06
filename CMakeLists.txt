@@ -4,6 +4,7 @@ project(BankVision VERSION 1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_AUTOMOC ON)
 
 set(CMAKE_PREFIX_PATH "C:/Qt/6.11.1/mingw_64")
 
@@ -42,5 +43,14 @@ add_executable(BankVision
     services/transactionservice.h services/transactionservice.cpp
     services/pretservice.h services/pretservice.cpp
     services/statservice.h services/statservice.cpp
+
+    views/FenetreConnexion.h
+    views/FenetreConnexion.cpp
+
+    resources/style.qss
+    views/fenetretableaubord.h views/fenetretableaubord.cpp
+    views/fenetreclients.h views/fenetreclients.cpp
+    views/fenetrecomptes.h views/fenetrecomptes.cpp
+    views/fenetreoperations.h views/fenetreoperations.cpp
 )
 target_link_libraries(BankVision PRIVATE Qt6::Core Qt6::Widgets Qt6::Sql)

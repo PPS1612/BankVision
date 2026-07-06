@@ -1,97 +1,39 @@
-#include <QCoreApplication>
-#include <QDebug>
+#include <QApplication>
+#include <QFile>
+#include <QIODevice>
 
-#include "models/banque.h"
-#include "models/Client.h"
-#include "models/comptecourant.h"
-#include "models/compteepargne.h"
-#include "models/compteprofessionnel.h"
-
-#include "services/statservice.h"
+#include "data/datamanager.h"
+#include "views/FenetreConnexion.h"
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication app(argc, argv);
+    QApplication app(argc, argv);
 
-    Banque banque("BankVision");
+    // Initialisation de la base de données
+    DataManager &dataManager = DataManager::getInstance();
 
-    // ================= CLIENT 1 =================
-
-    Client* client1 = new Client(
-        1,
-        "Jean Dupont",
-        "jean@gmail.com",
-        "0600000000"
-        );
-
-    client1->ajouterCompte(new CompteCourant(
-        "FR001",
-        1000,
-        500));
-
-    client1->ajouterCompte(new CompteEpargne(
-        "FR002",
-        2000,
-        3.5));
-
-    banque.ajouterClient(client1);
-
-    // ================= CLIENT 2 =================
-
-    Client* client2 = new Client(
-        2,
-        "Marie Martin",
-        "marie@gmail.com",
-        "0700000000"
-        );
-
-    client2->ajouterCompte(new CompteProfessionnel(
-        "FR003",
-        5000,
-        "Entreprise Martin",
-        3000,
-        10000));
-
-    banque.ajouterClient(client2);
-
-    // ================= STAT SERVICE =================
-
-    StatService stats;
-
-    qDebug() << "===== STATISTIQUES =====";
-
-    qDebug() << "Nombre clients :"
-             << stats.getNombreClients(banque);
-
-    qDebug() << "Nombre comptes :"
-             << stats.getNombreComptes(banque);
-
-    qDebug() << "Solde total :"
-             << stats.getSoldeTotalBanque(banque);
-
-    qDebug() << "Solde moyen/client :"
-             << stats.getSoldeMoyenParClient(banque);
-
-    qDebug() << "Solde moyen/compte :"
-             << stats.getSoldeMoyenParCompte(banque);
-
-    Client* riche = stats.getClientPlusRiche(banque);
-
-    if (riche != nullptr)
+    if (!dataManager.initialiser("banque.db"))
     {
-        qDebug() << "Client le plus riche :"
-                 << riche->getNom()
-                 << riche->getSoldeTotal();
+        return -1;
     }
 
-    Client* plusComptes = stats.getClientAvecPlusDeComptes(banque);
+    // Chargement du style global
+    QFile styleFile(":/style.qss");
 
-    if (plusComptes != nullptr)
+    if (styleFile.open(QIODevice::ReadOnly))
     {
-        qDebug() << "Client avec le plus de comptes :"
-                 << plusComptes->getNom()
-                 << plusComptes->getComptes().size();
+        QString style = styleFile.readAll();
+        app.setStyleSheet(style);
+        styleFile.close();
     }
 
-    return 0;
+    // Fenêtre principale
+    FenetreConnexion fenetre;
+    fenetre.show();
+
+    int resultat = app.exec();
+
+    dataManager.fermer();
+
+    return resultat;
 }

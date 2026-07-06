@@ -128,6 +128,56 @@ BankVision/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/build
 .PHONY : BankVision/fast
 
+#=============================================================================
+# Target rules for targets named BankVision_autogen_timestamp_deps
+
+# Build rule for target.
+BankVision_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 BankVision_autogen_timestamp_deps
+.PHONY : BankVision_autogen_timestamp_deps
+
+# fast build rule for target.
+BankVision_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision_autogen_timestamp_deps.dir\build.make CMakeFiles/BankVision_autogen_timestamp_deps.dir/build
+.PHONY : BankVision_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named BankVision_autogen
+
+# Build rule for target.
+BankVision_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 BankVision_autogen
+.PHONY : BankVision_autogen
+
+# fast build rule for target.
+BankVision_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision_autogen.dir\build.make CMakeFiles/BankVision_autogen.dir/build
+.PHONY : BankVision_autogen/fast
+
+BankVision_autogen/mocs_compilation.obj: BankVision_autogen/mocs_compilation.cpp.obj
+.PHONY : BankVision_autogen/mocs_compilation.obj
+
+# target to build an object file
+BankVision_autogen/mocs_compilation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/BankVision_autogen/mocs_compilation.cpp.obj
+.PHONY : BankVision_autogen/mocs_compilation.cpp.obj
+
+BankVision_autogen/mocs_compilation.i: BankVision_autogen/mocs_compilation.cpp.i
+.PHONY : BankVision_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+BankVision_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/BankVision_autogen/mocs_compilation.cpp.i
+.PHONY : BankVision_autogen/mocs_compilation.cpp.i
+
+BankVision_autogen/mocs_compilation.s: BankVision_autogen/mocs_compilation.cpp.s
+.PHONY : BankVision_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+BankVision_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/BankVision_autogen/mocs_compilation.cpp.s
+.PHONY : BankVision_autogen/mocs_compilation.cpp.s
+
 controllers/authcontroller.obj: controllers/authcontroller.cpp.obj
 .PHONY : controllers/authcontroller.obj
 
@@ -608,6 +658,126 @@ services/transactionservice.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/services/transactionservice.cpp.s
 .PHONY : services/transactionservice.cpp.s
 
+views/FenetreConnexion.obj: views/FenetreConnexion.cpp.obj
+.PHONY : views/FenetreConnexion.obj
+
+# target to build an object file
+views/FenetreConnexion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/views/FenetreConnexion.cpp.obj
+.PHONY : views/FenetreConnexion.cpp.obj
+
+views/FenetreConnexion.i: views/FenetreConnexion.cpp.i
+.PHONY : views/FenetreConnexion.i
+
+# target to preprocess a source file
+views/FenetreConnexion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/views/FenetreConnexion.cpp.i
+.PHONY : views/FenetreConnexion.cpp.i
+
+views/FenetreConnexion.s: views/FenetreConnexion.cpp.s
+.PHONY : views/FenetreConnexion.s
+
+# target to generate assembly for a file
+views/FenetreConnexion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/views/FenetreConnexion.cpp.s
+.PHONY : views/FenetreConnexion.cpp.s
+
+views/fenetreclients.obj: views/fenetreclients.cpp.obj
+.PHONY : views/fenetreclients.obj
+
+# target to build an object file
+views/fenetreclients.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/views/fenetreclients.cpp.obj
+.PHONY : views/fenetreclients.cpp.obj
+
+views/fenetreclients.i: views/fenetreclients.cpp.i
+.PHONY : views/fenetreclients.i
+
+# target to preprocess a source file
+views/fenetreclients.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/views/fenetreclients.cpp.i
+.PHONY : views/fenetreclients.cpp.i
+
+views/fenetreclients.s: views/fenetreclients.cpp.s
+.PHONY : views/fenetreclients.s
+
+# target to generate assembly for a file
+views/fenetreclients.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/views/fenetreclients.cpp.s
+.PHONY : views/fenetreclients.cpp.s
+
+views/fenetrecomptes.obj: views/fenetrecomptes.cpp.obj
+.PHONY : views/fenetrecomptes.obj
+
+# target to build an object file
+views/fenetrecomptes.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/views/fenetrecomptes.cpp.obj
+.PHONY : views/fenetrecomptes.cpp.obj
+
+views/fenetrecomptes.i: views/fenetrecomptes.cpp.i
+.PHONY : views/fenetrecomptes.i
+
+# target to preprocess a source file
+views/fenetrecomptes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/views/fenetrecomptes.cpp.i
+.PHONY : views/fenetrecomptes.cpp.i
+
+views/fenetrecomptes.s: views/fenetrecomptes.cpp.s
+.PHONY : views/fenetrecomptes.s
+
+# target to generate assembly for a file
+views/fenetrecomptes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/views/fenetrecomptes.cpp.s
+.PHONY : views/fenetrecomptes.cpp.s
+
+views/fenetreoperations.obj: views/fenetreoperations.cpp.obj
+.PHONY : views/fenetreoperations.obj
+
+# target to build an object file
+views/fenetreoperations.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/views/fenetreoperations.cpp.obj
+.PHONY : views/fenetreoperations.cpp.obj
+
+views/fenetreoperations.i: views/fenetreoperations.cpp.i
+.PHONY : views/fenetreoperations.i
+
+# target to preprocess a source file
+views/fenetreoperations.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/views/fenetreoperations.cpp.i
+.PHONY : views/fenetreoperations.cpp.i
+
+views/fenetreoperations.s: views/fenetreoperations.cpp.s
+.PHONY : views/fenetreoperations.s
+
+# target to generate assembly for a file
+views/fenetreoperations.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/views/fenetreoperations.cpp.s
+.PHONY : views/fenetreoperations.cpp.s
+
+views/fenetretableaubord.obj: views/fenetretableaubord.cpp.obj
+.PHONY : views/fenetretableaubord.obj
+
+# target to build an object file
+views/fenetretableaubord.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/views/fenetretableaubord.cpp.obj
+.PHONY : views/fenetretableaubord.cpp.obj
+
+views/fenetretableaubord.i: views/fenetretableaubord.cpp.i
+.PHONY : views/fenetretableaubord.i
+
+# target to preprocess a source file
+views/fenetretableaubord.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/views/fenetretableaubord.cpp.i
+.PHONY : views/fenetretableaubord.cpp.i
+
+views/fenetretableaubord.s: views/fenetretableaubord.cpp.s
+.PHONY : views/fenetretableaubord.s
+
+# target to generate assembly for a file
+views/fenetretableaubord.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/views/fenetretableaubord.cpp.s
+.PHONY : views/fenetretableaubord.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -616,7 +786,12 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... BankVision_autogen
+	@echo ... BankVision_autogen_timestamp_deps
 	@echo ... BankVision
+	@echo ... BankVision_autogen/mocs_compilation.obj
+	@echo ... BankVision_autogen/mocs_compilation.i
+	@echo ... BankVision_autogen/mocs_compilation.s
 	@echo ... controllers/authcontroller.obj
 	@echo ... controllers/authcontroller.i
 	@echo ... controllers/authcontroller.s
@@ -677,6 +852,21 @@ help:
 	@echo ... services/transactionservice.obj
 	@echo ... services/transactionservice.i
 	@echo ... services/transactionservice.s
+	@echo ... views/FenetreConnexion.obj
+	@echo ... views/FenetreConnexion.i
+	@echo ... views/FenetreConnexion.s
+	@echo ... views/fenetreclients.obj
+	@echo ... views/fenetreclients.i
+	@echo ... views/fenetreclients.s
+	@echo ... views/fenetrecomptes.obj
+	@echo ... views/fenetrecomptes.i
+	@echo ... views/fenetrecomptes.s
+	@echo ... views/fenetreoperations.obj
+	@echo ... views/fenetreoperations.i
+	@echo ... views/fenetreoperations.s
+	@echo ... views/fenetretableaubord.obj
+	@echo ... views/fenetretableaubord.i
+	@echo ... views/fenetretableaubord.s
 .PHONY : help
 
 

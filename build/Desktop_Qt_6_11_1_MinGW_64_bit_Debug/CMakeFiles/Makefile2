@@ -71,21 +71,24 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/BankVision.dir/clean
+clean: CMakeFiles/BankVision_autogen_timestamp_deps.dir/clean
+clean: CMakeFiles/BankVision_autogen.dir/clean
 .PHONY : clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/BankVision.dir
 
 # All Build rule for target.
-CMakeFiles/BankVision.dir/all:
+CMakeFiles/BankVision.dir/all: CMakeFiles/BankVision_autogen.dir/all
+CMakeFiles/BankVision.dir/all: CMakeFiles/BankVision_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21 "Built target BankVision"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28 "Built target BankVision"
 .PHONY : CMakeFiles/BankVision.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BankVision.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles 29
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/BankVision.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles 0
 .PHONY : CMakeFiles/BankVision.dir/rule
@@ -98,6 +101,58 @@ BankVision: CMakeFiles/BankVision.dir/rule
 CMakeFiles/BankVision.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision.dir\build.make CMakeFiles/BankVision.dir/clean
 .PHONY : CMakeFiles/BankVision.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/BankVision_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+CMakeFiles/BankVision_autogen_timestamp_deps.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision_autogen_timestamp_deps.dir\build.make CMakeFiles/BankVision_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision_autogen_timestamp_deps.dir\build.make CMakeFiles/BankVision_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num= "Built target BankVision_autogen_timestamp_deps"
+.PHONY : CMakeFiles/BankVision_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/BankVision_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/BankVision_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles 0
+.PHONY : CMakeFiles/BankVision_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+BankVision_autogen_timestamp_deps: CMakeFiles/BankVision_autogen_timestamp_deps.dir/rule
+.PHONY : BankVision_autogen_timestamp_deps
+
+# clean rule for target.
+CMakeFiles/BankVision_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision_autogen_timestamp_deps.dir\build.make CMakeFiles/BankVision_autogen_timestamp_deps.dir/clean
+.PHONY : CMakeFiles/BankVision_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/BankVision_autogen.dir
+
+# All Build rule for target.
+CMakeFiles/BankVision_autogen.dir/all: CMakeFiles/BankVision_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision_autogen.dir\build.make CMakeFiles/BankVision_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision_autogen.dir\build.make CMakeFiles/BankVision_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=29 "Built target BankVision_autogen"
+.PHONY : CMakeFiles/BankVision_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/BankVision_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/BankVision_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\hp\Desktop\BankVision\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles 0
+.PHONY : CMakeFiles/BankVision_autogen.dir/rule
+
+# Convenience name for target.
+BankVision_autogen: CMakeFiles/BankVision_autogen.dir/rule
+.PHONY : BankVision_autogen
+
+# clean rule for target.
+CMakeFiles/BankVision_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BankVision_autogen.dir\build.make CMakeFiles/BankVision_autogen.dir/clean
+.PHONY : CMakeFiles/BankVision_autogen.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

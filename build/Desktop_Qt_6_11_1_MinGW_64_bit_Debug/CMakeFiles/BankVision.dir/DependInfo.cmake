@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "" "BankVision_autogen/timestamp" "custom" "BankVision_autogen/deps"
+  "C:/Users/hp/Desktop/BankVision/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/BankVision_autogen/mocs_compilation.cpp" "CMakeFiles/BankVision.dir/BankVision_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/BankVision_autogen/mocs_compilation.cpp.obj.d"
   "C:/Users/hp/Desktop/BankVision/controllers/authcontroller.cpp" "CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/controllers/authcontroller.cpp.obj.d"
   "C:/Users/hp/Desktop/BankVision/controllers/comptecontroller.cpp" "CMakeFiles/BankVision.dir/controllers/comptecontroller.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/controllers/comptecontroller.cpp.obj.d"
   "C:/Users/hp/Desktop/BankVision/controllers/statcontroller.cpp" "CMakeFiles/BankVision.dir/controllers/statcontroller.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/controllers/statcontroller.cpp.obj.d"
@@ -28,6 +30,11 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/hp/Desktop/BankVision/services/pretservice.cpp" "CMakeFiles/BankVision.dir/services/pretservice.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/services/pretservice.cpp.obj.d"
   "C:/Users/hp/Desktop/BankVision/services/statservice.cpp" "CMakeFiles/BankVision.dir/services/statservice.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/services/statservice.cpp.obj.d"
   "C:/Users/hp/Desktop/BankVision/services/transactionservice.cpp" "CMakeFiles/BankVision.dir/services/transactionservice.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/services/transactionservice.cpp.obj.d"
+  "C:/Users/hp/Desktop/BankVision/views/FenetreConnexion.cpp" "CMakeFiles/BankVision.dir/views/FenetreConnexion.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/views/FenetreConnexion.cpp.obj.d"
+  "C:/Users/hp/Desktop/BankVision/views/fenetreclients.cpp" "CMakeFiles/BankVision.dir/views/fenetreclients.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/views/fenetreclients.cpp.obj.d"
+  "C:/Users/hp/Desktop/BankVision/views/fenetrecomptes.cpp" "CMakeFiles/BankVision.dir/views/fenetrecomptes.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/views/fenetrecomptes.cpp.obj.d"
+  "C:/Users/hp/Desktop/BankVision/views/fenetreoperations.cpp" "CMakeFiles/BankVision.dir/views/fenetreoperations.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/views/fenetreoperations.cpp.obj.d"
+  "C:/Users/hp/Desktop/BankVision/views/fenetretableaubord.cpp" "CMakeFiles/BankVision.dir/views/fenetretableaubord.cpp.obj" "gcc" "CMakeFiles/BankVision.dir/views/fenetretableaubord.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
