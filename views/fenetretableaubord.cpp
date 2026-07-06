@@ -7,6 +7,8 @@
 #include <QGridLayout>
 #include <QFrame>
 #include "FenetreOperations.h"
+#include "fenetrestatistiques.h"
+#include "fenetreprets.h"
 
 FenetreTableauBord::FenetreTableauBord(QWidget *parent)
     : QWidget(parent)
@@ -120,6 +122,14 @@ void FenetreTableauBord::construireInterface()
 
     connect(boutonOperations, &QPushButton::clicked,
             this, &FenetreTableauBord::ouvrirOperations);
+
+    connect(boutonStats, &QPushButton::clicked,
+        this, &FenetreTableauBord::ouvrirStatistiques);
+    
+    connect(boutonPrets,
+        &QPushButton::clicked,
+        this,
+        &FenetreTableauBord::ouvrirPrets);
 }
 
 void FenetreTableauBord::appliquerStyle()
@@ -220,4 +230,14 @@ void FenetreTableauBord::ouvrirOperations()
 {
     FenetreOperations* fenetreOperations = new FenetreOperations();
     fenetreOperations->show();
+}
+void FenetreTableauBord::ouvrirStatistiques()
+{
+    FenetreStatistiques* f = new FenetreStatistiques();
+    f->show();
+}
+void FenetreTableauBord::ouvrirPrets()
+{
+    FenetrePrets* f = new FenetrePrets();
+    f->show();
 }

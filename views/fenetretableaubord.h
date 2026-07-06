@@ -26,6 +26,8 @@ private slots:
     void ouvrirComptes();
     void seDeconnecter();
     void ouvrirOperations();
+    void ouvrirStatistiques();
+    void ouvrirPrets();
 
 public:
     explicit FenetreTableauBord(QWidget *parent = nullptr);

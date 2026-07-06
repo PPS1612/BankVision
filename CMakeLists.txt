@@ -52,5 +52,9 @@ add_executable(BankVision
     views/fenetreclients.h views/fenetreclients.cpp
     views/fenetrecomptes.h views/fenetrecomptes.cpp
     views/fenetreoperations.h views/fenetreoperations.cpp
+    views/fenetrestatistiques.h
+    views/fenetrestatistiques.cpp
+    views/fenetreprets.h
+    views/fenetreprets.cpp
 )
 target_link_libraries(BankVision PRIVATE Qt6::Core Qt6::Widgets Qt6::Sql)
